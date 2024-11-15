@@ -1,0 +1,18 @@
+nav {
+    background: #00000036;
+    display: static;
+}
+
+.vinculo_navegacion{
+    font-size: 14px;
+    a{
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra negra translúcida */
+        text-decoration: none;
+    }
+}
+
+.selected {
+    font-weight: bold !important;
+    border-bottom: 3.5px solid white;
+}
