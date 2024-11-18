@@ -39,17 +39,72 @@
     font-weight: 500;
     font-style: normal;
   }
-  
+
+  :root {
+    --color-gris: rgb(121, 124, 126);
+    --color-ligero: rgb(226, 235, 242);
+  }  
+
   body {
     font-family: 'Poppins', sans-serif !important;
   }
+
   img {
     width: 100%;
     height: auto; 
     display: block;
   }
 
-  :root {
-    --color-gris: rgb(121, 124, 126);
-    --color-ligero: rgb(226, 235, 242);
+  .boton{
+    width: fit-content;
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 30px;
+  }
+
+  .separador{
+    margin: 0;
+    border: 0;
+    height: 3px;
+    background-color: black;
+    opacity: 1;
+  
+  }
+  .titulo-objeto{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+      font-size: 3rem;
+    }
+    span{
+      font-style: italic;
+      color: var(--color-gris);
+      font-weight: 500;
+      font-size: 26px;
+      position: relative;
+    }
+    span::before{
+      content: "";
+      display: inline-block;
+      margin-left: 40px;
+      width: 40px;
+      height: 3px;
+      background-color: var(--color-gris);
+      vertical-align: middle;
+      margin: 0 20px;
+    }
+    span::after{
+      content: "";
+      display: inline-block;
+      width: 40px;
+      height: 3px;
+      background-color: var(--color-gris);
+      vertical-align: middle;
+      margin: 0 20px;
+    }
   }
