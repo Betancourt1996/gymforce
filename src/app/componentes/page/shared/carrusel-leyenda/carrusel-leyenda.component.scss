@@ -1,0 +1,53 @@
+.carousel-item{
+    padding: 4rem 10rem;
+}
+.parrafo{
+    padding-top: 3rem;
+    font-size: 28px;
+    color: var(--color-gris);
+}
+.nota{
+    font-size: 16px;
+    color: var(--color-gris);
+    font-style: italic;
+}
+
+.nota::before{
+    content: "";
+    display: inline-block;
+    margin-left: 40px;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-gris);
+    vertical-align: middle;
+    margin: 0 16px;
+  }
+  .foto-cita {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.cita {
+    display: flex;
+    justify-content: center;
+    position: relative; 
+    text-align: center;
+}
+
+.cita::before {
+    content: url("/images/icon003.png");
+    scale: 0.8;
+    position: absolute;
+    z-index: 1;
+    top: 46%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(0%) brightness(0%);
+}

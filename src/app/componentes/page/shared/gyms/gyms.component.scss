@@ -1,0 +1,51 @@
+.lista-gymasios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 3rem;
+    height: 300px;
+    justify-items: center;
+}
+.gymnasio {
+    position: relative; 
+    display: inline-block;
+}
+
+.gymnasio img {
+    width: 100%;
+    display: block;
+}
+
+.gym-tarjeta {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 300px;
+    height: 130px;
+    padding: 20px 20px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.gym-tarjeta img {
+    width: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gym-tarjeta h3{
+    font-size: 20px;
+    font-weight: bold;    
+    margin-bottom: 10px;
+}
+
+a:hover{
+    cursor: pointer;
+}
