@@ -1,0 +1,102 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-7 div-form">
+            <div class="formulario">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="input-formulatio">
+                            <input type="text" placeholder="Nombre y Apellido">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-formulatio">
+                            <input type="mail" placeholder="Correo">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="input-formulatio">
+                            <input type="tel" placeholder="Telefono">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-formulatio">
+                            <input type="text" placeholder="Mensaje">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="input-formulatio" (click)="abrirFileExplorer()">
+                            <p class="p-file">
+                                @if(nameFile){
+                                    {{nameFile}}
+                                }@else{
+                                    <span>Foto</span>
+                                }
+                            </p>
+                            <input type="file" style="display: none;"  (change)="addfile($event)"  id="inputfile">
+                            <img src="images/file.svg" alt="Video" class="playbtn" style="width: 40px; margin-left: 1rem;" >
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="input-formulatio">
+                            <textarea placeholder="Comentarios" rows="4"></textarea>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="row div-btnenviar">
+                    <button class="boton" (click)="enviarForm()">Enviar</button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-5">
+            <div class="div-info-form">
+                <div class="titulo-objeto-form">
+                    <h1>Contáctanos</h1>
+                    <span>Todo lo que necesitas</span>            
+                </div>
+                <div class="parrafos-info-form">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam 
+                        erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex .</p>
+                </div>
+              
+                <div class="lista-contactos-form">
+                    <div class="contacto-form">
+                        <div class="imagen-mini-post">
+                            <img src="images/icon005.png" alt="Ubicacion">
+                        </div>
+                        <div>
+                            <span>Lorem ipsum dolor sit amet consectetuer adipiscing</span>
+                        </div>
+                    </div>  <div class="contacto-form">
+                        <div class="imagen-mini-post">
+                            <img src="images/icon006.png" alt="Ubicacion">
+                        </div>
+                        <div>
+                            <span>Lunes a Viernes de 6AM a 8PM</span>
+                        </div>
+                    </div>  <div class="contacto-form">
+                        <div class="imagen-mini-post">
+                            <img src="images/icon007.png" alt="Ubicacion">
+                        </div>
+                        <div>
+                            <span>+593 99864723</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="redes-form">
+                    <h3 class="siguenos-form">Síguenos</h3>
+                    <div class="d-flex flex-row gap-3">
+                        <a ><img src="images/insta2.png" alt="IGlogo" style="width: 50px;"></a>
+                        <a ><img src="images/fb01.png" alt="FBlogo" style="width: 50px;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

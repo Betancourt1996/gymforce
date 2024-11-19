@@ -1,0 +1,22 @@
+.div-encabezado {
+    background-color: var(--color-ligero);
+    background-image: url("/images/003.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 300px;
+    opacity: 0.8; 
+}
+
+.titulo-objeto{
+    padding-top: 7rem;    
+    h1{
+        color: white;
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8), -2px -2px 6px rgba(0, 0, 0, 0.6);
+    }
+    span {
+        color: white;
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8), -2px -2px 6px rgba(0, 0, 0, 0.6);
+    }
+}
+
