@@ -5,11 +5,12 @@ import { CarruselComponent } from "../shared/carrusel/carrusel.component";
 import { GymsComponent } from "../shared/gyms/gyms.component";
 import { CarruselLeyendaComponent } from "../shared/carrusel-leyenda/carrusel-leyenda.component";
 import { PostComponent } from "../shared/post/post.component";
+import { FooterComponent } from "../../footer/footer.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, PlanesComponent, CarruselComponent, GymsComponent, CarruselLeyendaComponent, PostComponent],
+  imports: [CommonModule, PlanesComponent, CarruselComponent, GymsComponent, CarruselLeyendaComponent, PostComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
