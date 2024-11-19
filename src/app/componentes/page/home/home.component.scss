@@ -69,6 +69,16 @@
     z-index: 1;
 }
 
+.div-posts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 3rem;
+    padding: 0 10rem !important;
+    padding-bottom: 3rem ;
+    justify-items: center;
+}
+
 @media (max-width: 1400px) {
     .padding-pagina {
         padding: 0 3rem;
