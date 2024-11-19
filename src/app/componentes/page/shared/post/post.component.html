@@ -9,10 +9,17 @@
         <span class="titulo-post">{{ tituloPost }} @if(tituloPost && tituloPost.length<17){<br><span style="visibility: hidden;">.</span>}</span>
     </div>
     <div class="mt-2 leer-mas-post">
-        <a>
-            <svg  viewBox="0 0 32 32" xml:space="preserve" width="16px" height="16px" fill="rgb(121, 124, 126)" stroke="rgb(121, 124, 126)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="1.6"></g><g id="SVGRepo_iconCarrier"> <g> <g id="stop"> <rect style="fill:#7d7d7d;" width="32" height="32"></rect> </g> </g> </g></svg>
-            <span>Leer más</span>
-        </a>
+        @if (postId) {
+            <a [routerLink]="['/noticias', postId]">
+                <svg  viewBox="0 0 32 32" xml:space="preserve" width="16px" height="16px" fill="rgb(121, 124, 126)" stroke="rgb(121, 124, 126)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="1.6"></g><g id="SVGRepo_iconCarrier"> <g> <g id="stop"> <rect style="fill:#7d7d7d;" width="32" height="32"></rect> </g> </g> </g></svg>
+                <span>Leer más</span>
+            </a>
+        } @else {
+            <a>
+                <svg  viewBox="0 0 32 32" xml:space="preserve" width="16px" height="16px" fill="rgb(121, 124, 126)" stroke="rgb(121, 124, 126)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="1.6"></g><g id="SVGRepo_iconCarrier"> <g> <g id="stop"> <rect style="fill:#7d7d7d;" width="32" height="32"></rect> </g> </g> </g></svg>
+                <span>Leer más</span>
+            </a>
+        }
         
     </div>
 </div>
