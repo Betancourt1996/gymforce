@@ -29,7 +29,7 @@ export class CarruselComponent implements OnInit {
   servicios: Product[] = [
     {
       id: '1000',      
-      name: 'Espacio',      
+      name: 'Stepboxing',      
       image: 'images/post01.jpg'
     },
     {

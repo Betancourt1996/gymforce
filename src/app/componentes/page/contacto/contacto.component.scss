@@ -1,4 +1,6 @@
 .div-encabezado {
+    display: flex;
+    justify-content: center;
     background-color: var(--color-ligero);
     background-image: url("/images/003.jpg");
     background-size: cover;

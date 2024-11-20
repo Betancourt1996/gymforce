@@ -1,0 +1,131 @@
+.carousel-item{
+    padding: 4rem 10rem;
+}
+
+/* .derecha-col{
+    background-color: yellow;
+}
+.sede-info{
+    background-color: red;
+} */
+.sede-info{
+    padding: 0 2rem;
+}
+.sede-info{
+    padding-left: 3rem;
+}
+
+
+.titulo-objeto{
+    text-align: center;
+    h1{
+      font-size: 2.8rem;
+      font-weight: 600;
+    }
+    span{
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+.lista-horario-item {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.reloj{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+.reloj img{
+    width: 40px;
+    margin-right: 10px;
+}
+.detalles-horaios-sede{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lista-horarios-sede .detalles-horaios-sede{
+    border-bottom: 2px solid black;
+    margin-bottom: 12px;
+}
+.lista-horarios-sede .lista-horario-item:last-child .detalles-horaios-sede{
+    border-bottom: none;
+    margin-bottom: 0px;
+}
+.detalles-horaios-sede h3{
+    font-weight: 600;
+}
+
+.derecha-col {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 0 1rem;
+}
+
+.div-imagen-sede{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    margin-top: 3rem;   
+}
+.contenedor-imagen{
+    //background-color: purple;
+    padding: 40px 40px 0 40px;
+}
+.imagen-carusel{
+    object-fit: cover;
+    position: relative;
+    z-index: 0; 
+}
+.ubicacion-imagen {
+    width: 25%;
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: 100%;
+    transform: translate(-90%, -10%);
+}
+.caption-imagen{
+    position: absolute;
+    z-index: 1;
+    top: 70%;
+    left: 0%;
+    background: var(--color-ligero);
+    color: black;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.4);
+    padding: 10px 25px;
+    border-radius: 5px;    
+    text-align: center;    
+}
+.nota-foto-sede{
+    text-align: center;
+    margin-top: 10px;
+    p{
+        font-size: 2rem;
+        line-height: 1.0;
+        color: var(--color-gris);
+        font-style: italic;
+    }
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(0%) brightness(0%);
+}
+
+/* HORARIO */
+
+
+.titulo-objeto.horario{
+
+    span{
+        color: black;
+        font-size: 32px;
+        font-weight: bold; 
+    }
+  }
