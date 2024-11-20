@@ -1,28 +1,31 @@
-
-
-.carrusel-item {
-    height: 200px;
-    width: 200px;
-
+.contenido{
+    width: 600px;
+    height: 300px;
+    overflow: hidden; 
+    position: relative;
 }
-.carrusel-item img{
+.contenido img {
     width: 100%;
-    max-height: 600px;
+    height: 100%;
     object-fit: cover;
     object-position: center;
 }
-
 .carrusel-caption {
     position: absolute;
-    width: fit-content;
-    height: fit-content;
-    top: 40px;
-    color: white;
-    font-weight: 100;
-    font-style: italic;
-    background-color: var(--color-gris);
-    padding: 10px 20px;
+    top: 20px;
+    background: var(--color-gris);
+    color: #fff;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.4);
+    padding: 5px 10px;
     border-radius: 5px;
-    font-size: 32px;
-    text-transform: uppercase;
+    text-align: center;
+}
+::ng-deep.mi-carrusel .p-carousel-indicator button[aria-current="page"]{
+    background-color: var(--color-gris);
+}
+::ng-deep.mi-carrusel .p-carousel-indicator button{
+    border-radius: 50%;
+    margin: 0 10px;
+    width: 9px;
+    scale: 2;
 }
