@@ -1,0 +1,126 @@
+.div-encabezado {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-ligero);
+    background-image: url("/images/003.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 300px;
+    opacity: 0.8; 
+}
+
+.titulo-objeto{
+    padding-top: 7rem;    
+    h1{
+        color: white;
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8), -2px -2px 6px rgba(0, 0, 0, 0.6);
+    }
+    span {
+        color: white;
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8), -2px -2px 6px rgba(0, 0, 0, 0.6);
+    }
+}
+.titulo-objeto-dos{
+    margin-top: 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+      font-size: 35px;
+    }
+    span{
+      font-style: italic;
+      color: var(--color-gris);
+      font-weight: 500;
+      font-size: 20px;
+      position: relative;
+    }
+    span::before{
+      content: "";
+      display: inline-block;
+      margin-left: 40px;
+      width: 40px;
+      height: 3px;
+      background-color: var(--color-gris);
+      vertical-align: middle;
+      margin: 0 20px;
+    }
+  }
+.div-contenido-patrocinadores{
+    margin-bottom: 3rem;
+}
+.titulo-objeto-dos{
+    align-items: start;
+    span {
+        font-size: 28px;
+        font-weight: 600;
+        font-style: italic;
+    }
+}
+.item-patrocinador{
+    margin-bottom: 2rem;
+}
+.item-patrocinador:last-child{
+    margin-bottom: 0;
+}
+.item-imagen-patrocinador{
+    padding: 3rem; 
+}
+#hangaroa_logo{
+    box-shadow: 30px 0 0px 10px white, 30px 0px 0px 20px rgb(116, 90, 147);
+}
+#mcdonalds_logo{
+    box-shadow: 30px 0 0px 10px white, 30px 0px 0px 20px rgb(240, 53, 64);
+}
+.div-info-beneficios{
+    padding: 1rem 2rem 1rem 5rem;
+}
+.titulo-objeto-tres{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    h1{
+      font-size: 35px;
+    }
+    span{
+      font-style: italic;
+      color: var(--color-gris);
+      font-weight: 500;
+      font-size: 20px;
+      margin-left: 14px;
+      position: relative;
+    }
+  }
+  .titulo-objeto-tres.centro{
+    align-items: center;
+  }
+  .contacto-beneficio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .imagen-mini-post img{
+    width: 50px;
+    margin-right: 15px;
+  }
+  .lista-contactos-beneficios .contacto-beneficio{
+    margin-bottom: 8px;
+  }
+  
+  .redes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .siguenos{
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    margin-right: 4rem;
+}

@@ -6,6 +6,7 @@ import { PostDetalleComponent } from './componentes/page/shared/post/post-detall
 import { ContactoComponent } from './componentes/page/contacto/contacto.component';
 import { SedeComponent } from './componentes/page/sede/sede.component';
 import { MembresiaComponent } from './componentes/page/membresia/membresia.component';
+import { BeneficiosComponent } from './componentes/page/beneficios/beneficios.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'noticias', component: NoticiasComponent },
@@ -13,7 +14,8 @@ export const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
   { path: 'sede', component: SedeComponent },
   { path: 'membresias', component: MembresiaComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: 'beneficios', component: BeneficiosComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' },  
 ];
 
 @NgModule({
