@@ -119,7 +119,9 @@
 }
 
 /* HORARIO */
-
+.div-horario{
+    padding: 0 6rem;
+}
 
 .titulo-objeto.horario{
 
@@ -128,4 +130,28 @@
         font-size: 32px;
         font-weight: bold; 
     }
-  }
+}
+.lista-servicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    h3{
+        margin: 0 20px;
+        font-size: 30px;
+        font-weight: 500;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        line-height: 1.0;
+        color: var(--color-gris);
+        font-style: italic;
+        position: relative;
+    }
+    h3.activo::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 60%;
+        height: 3px;
+        background-color: var(--color-gris);
+    }
+}

@@ -1,0 +1,21 @@
+.tabla-horario{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+th {
+    width: 17.6%;
+}
+.celda-invicible{
+    visibility: hidden;
+    width: 12%;
+}
+td, th{
+    background-color: white;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
