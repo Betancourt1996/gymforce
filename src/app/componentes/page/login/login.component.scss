@@ -1,0 +1,125 @@
+.altura-min-100{
+    min-height: 100vh;
+    background-color: var(--color-ligero);
+}
+.pad-0{
+    padding-left: 0;
+    padding-right: 0;
+}
+.col.pad-0, .col-12.pad-0,.col-6.pad-0{
+    padding: 1rem 1rem;
+} 
+.div-imagen-lateral img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-right: 2rem;
+}
+
+.div-form{
+    padding: 2rem 4rem 2rem 2rem;
+}
+
+.titulo-objeto{
+    align-items: start;
+    h1{
+      font-size: 44px;
+      font-weight: 600;
+      color: black;
+    }
+    span{
+      font-style: italic;
+      color: var(--color-gris);
+      font-weight: bold;
+      font-style: italic;
+      font-size: 19px;
+    }
+    span::before{
+      content: "";
+      display: inline-block;
+      width: 50px;
+      height: 3px;
+      margin-left: 0;
+      margin-right: 40px;
+    }
+    span::after{
+      content: none;
+    }
+  }
+
+.input-formulatio input,textarea, .p-file{
+    width: 100%;
+}
+.formulario .row{
+    margin-bottom: 1rem;
+}
+.formulario .row:last-child{
+    margin-bottom: 0;
+}
+.div-btnenviar{
+    display: flex;
+    justify-content: center;
+    .boton{
+        width: 100%;
+    }
+}
+.input-formulatio{
+    display: flex;
+    flex-direction: row;
+}
+.input-formulatio input, textarea, .p-file{
+    padding: 15px;
+    background-color: white;
+    font-size: 18px;
+    
+    border:none;
+    font-weight: 600;
+    font-style: italic;    
+    
+
+}
+.input-formulatio  input::placeholder {
+    color: gray;
+    font-style: italic;
+    font-weight: 600;
+    opacity: 0.5;
+}
+.input-icono{
+    position: relative;
+    i{
+        position: absolute;
+        font-size: 20px;
+        color: var(--color-gris);
+        opacity: 0.5;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1rem;
+    }
+    input{
+        padding-left: 3.5rem;
+    }
+}
+.remember{
+    align-items: center;
+    input[type='checkbox']{
+        width: 18px;
+        height: 18px;
+        accent-color: var(--color-gris);
+    }
+    span{
+        font-size: 17px;
+        margin-left: 10px;
+    }
+}
+.forget{
+    align-items: center;
+    font-size: 17px;
+    font-style: italic;
+}
+
+.text-subrayado{
+    color: black;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    padding-bottom: 1px; 
+}
