@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { PostService } from 'app/services/post.service';
 
 @Component({
   selector: 'app-post',

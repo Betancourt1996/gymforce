@@ -64,7 +64,7 @@ export class PostService {
   getUltimosPost(): Observable<any> {
     return of(this.data.slice(0, 3));
   }
-  getPostById(idPost: number): Observable<any> {
+  getPostPorId(idPost: number): Observable<any> {
     const foundPost = this.data.find(post => post.id === idPost);
     return of(foundPost);
   }

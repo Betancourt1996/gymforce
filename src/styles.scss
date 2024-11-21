@@ -115,3 +115,12 @@
   a:hover{
     cursor: pointer;
   }
+  .parrafo-especifico-insertar-html{
+    margin-top: 1rem;
+    p{
+        color: var(--color-gris);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+}
