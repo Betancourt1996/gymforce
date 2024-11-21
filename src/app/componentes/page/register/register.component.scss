@@ -1,0 +1,157 @@
+.altura-min-100{
+    min-height: 100vh;
+    background-color: var(--color-ligero);
+}
+.pad-0{
+    padding-left: 0;
+    padding-right: 0;
+}
+.col.pad-0, .col-12.pad-0,.col-6.pad-0{
+    padding: 1rem 1rem;
+} 
+.div-imagen-lateral img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding-right: 2rem;
+}
+
+.div-form{
+    padding: 2rem 4rem 2rem 2rem;
+}
+
+.titulo-objeto{
+    align-items: start;
+    h1{
+      font-size: 44px;
+      font-weight: 600;
+      color: black;
+    }
+    span{
+      font-style: italic;
+      color: var(--color-gris);
+      font-weight: bold;
+      font-style: italic;
+      font-size: 19px;
+    }
+    span::before{
+      content: "";
+      display: inline-block;
+      width: 50px;
+      height: 3px;
+      margin-left: 0;
+      margin-right: 40px;
+    }
+    span::after{
+      content: none;
+    }
+  }
+
+.input-formulatio input,textarea, .p-file{
+    width: 100%;
+}
+.formulario .row{
+    margin-bottom: 0.3rem;
+}
+.formulario .row:last-child{
+    margin-bottom: 0;
+}
+.div-btnenviar{
+    display: flex;
+    justify-content: center;
+    .boton{
+        width: 100%;
+    }
+}
+.input-formulatio{
+    display: flex;
+    flex-direction: row;
+}
+.input-formulatio input, textarea, .p-file{
+    padding: 15px;
+    background-color: white;
+    font-size: 18px;
+    
+    border:none;
+    font-weight: 600;
+    font-style: italic;    
+    
+
+}
+.input-formulatio  input::placeholder {
+    color: gray;
+    font-style: italic;
+    font-weight: 600;
+    opacity: 0.5;
+}
+.input-icono{
+    position: relative;
+    i:first-child{
+        position: absolute;
+        font-size: 20px;
+        color: var(--color-gris);
+        opacity: 0.5;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1rem;
+    }
+    i:nth-of-type(2){
+        position: absolute;
+        font-size: 25px;
+        color: var(--color-gris);
+        opacity: 0.5;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 93%;
+    }
+    input{
+        padding-left: 3.5rem;
+    }
+}
+.forget{
+    align-items: center;
+    font-size: 17px;
+    font-style: italic;
+}
+/* Date input */
+.input-date-icono {
+    position: relative;
+}
+
+.input-date-icono div{
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.input-date-icono div label{
+    margin-left: 3rem;
+    color: gray;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    opacity: 0.5;
+}
+.input-date-icono div input[type="date"] {
+    
+    color: var(--color-gris);
+    
+    
+}
+
+.input-date-icono input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background: none;
+    z-index: 1;
+  }
+.input-date-icono i {
+    pointer-events: none;
+    position: absolute;
+    left: 94%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #666; 
+    pointer-events: none; 
+}
+/* Date input */
+    
