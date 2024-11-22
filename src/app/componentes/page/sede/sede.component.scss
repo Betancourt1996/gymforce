@@ -37,6 +37,19 @@
     background-color: var(--color-ligero);
     margin-bottom: 2rem;
 }
+
+.map-wrap {
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+  
+  .map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
 @media (max-width: 1400px) {
     .padding-pagina {
         padding: 0 3rem;
@@ -54,15 +67,9 @@
         padding: 0 1rem;
     }
 }
-
-.map-wrap {
-    position: relative;
-    width: 100%;
-    height: 500px;
-  }
   
-  .map {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  @media (max-width: 480px) {
+    .padding-pagina {
+        padding: 0 1rem;
+    }
   }

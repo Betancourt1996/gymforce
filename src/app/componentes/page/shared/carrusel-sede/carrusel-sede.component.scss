@@ -156,3 +156,41 @@
         background-color: var(--color-gris);
     }
 }
+
+
+@media(max-width: 1400){
+
+}
+@media(max-width: 1200){
+
+}
+
+@media (max-width: 1024px) {
+    .sede-info {
+        padding-left: 0rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-item {
+        padding: 3rem 1rem;
+    }
+    .detalles-horaios-sede h3{
+        font-size: 1.5rem;
+    }
+    .sede-info {
+        padding-left: 0rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-item {
+        padding: 3rem 1rem;
+    }
+    .detalles-horaios-sede h3{
+        font-size: 1rem;
+    }
+    .sede-info {
+        padding-left: 0rem;
+    }
+  }
