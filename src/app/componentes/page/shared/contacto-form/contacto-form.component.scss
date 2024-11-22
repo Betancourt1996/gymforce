@@ -8,12 +8,7 @@
 .formulario input,textarea, .p-file{
     width: 100%;
 }
-.formulario .row{
-    margin-bottom: 2rem;
-}
-.formulario .row:last-child{
-    margin-bottom: 0;
-}
+
 .div-btnenviar{
     display: flex;
     justify-content: center;
@@ -103,3 +98,34 @@
     font-style: italic;
     margin-right: 4rem;
 }
+
+@media(max-width: 1400){
+
+}
+@media(max-width: 1200){
+
+}
+
+@media (max-width: 1024px) {
+  .div-form{
+    padding: 2rem 3rem;
+  }   
+  }
+  
+  @media (max-width: 768px) {
+    .div-form{
+      padding: 2rem 1rem;
+    }
+    .formulario{
+      padding: 2rem;
+    } 
+  }
+  
+  @media (max-width: 480px) {
+    .div-form{
+      padding: 2rem 1rem;
+    } 
+    .formulario{
+      padding: 1rem;
+    } 
+  }

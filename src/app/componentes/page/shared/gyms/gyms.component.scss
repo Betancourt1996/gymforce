@@ -7,7 +7,7 @@
     justify-items: center;
 }
 .gymnasio{
-    width: 400px;
+    width: 500px;
 }
 .imagen-gym {
     position: relative; 
@@ -51,13 +51,13 @@
 
 @media (max-width: 1400px) {
     .lista-gymnasios {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (max-width: 1200px) {
     .lista-gymnasios {
       height: 38rem;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
 }
 @media (max-width: 800px) {
