@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class="col-8 p-0 pe-5 gap-4 d-flex justify-content-end align-items-center">
-                <div class="vinculo_navegacion d-flex gap-5 pe-3">
+                <div class="d-none  vinculo_navegacion d-lg-flex gap-5 pe-3">
                     <a routerLink="/" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}">Home</a>
                     <a routerLink="/sede" routerLinkActive="selected">Sede</a>
                     <a routerLink="/membresias" routerLinkActive="selected">Membresias</a>
@@ -19,7 +19,48 @@
                     <a routerLink="/perfil" routerLinkActive="selected">
                         <img src="images/avatar.png" alt="Avatar" style="width: 25px;">
                     </a>
-                    <img src="images/menu.png" alt="Menu" style="width: 25px;">
+                    <div class="d-flex d-lg-none align-items-center">                        
+                        <div class="dropdown">
+                            <div id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a>
+                                    <img src="images/menu.png" alt="Menu" style="width: 25px;">
+                                </a>
+                            </div>
+                            <ul class="dropdown-menu" id="ul-dropdown-menu-header" aria-labelledby="dropdownMenuButton">
+                                <li>
+                                    <div class="vinculo_navegacion">
+                                        <a class="dropdown-item" routerLink="/">Home</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="vinculo_navegacion">
+                                        <a class="dropdown-item" routerLink="/sede">Sede</a>
+                                    </div>                                    
+                                </li>
+                                <li>
+                                    <div class="vinculo_navegacion">
+                                        <a class="dropdown-item" routerLink="/membresias">Membresias</a>
+                                    </div>                                    
+                                </li>
+                                <li>
+                                    <div class="vinculo_navegacion">
+                                        <a class="dropdown-item" routerLink="/noticias">Noticias</a>
+                                    </div>                                    
+                                </li>
+                                <li>
+                                    <div class="vinculo_navegacion">
+                                        <a class="dropdown-item" routerLink="/contacto">Contacto</a>
+                                    </div>                                    
+                                </li>
+                                <li>
+                                    <div class="vinculo_navegacion">
+                                        <a class="dropdown-item" routerLink="/beneficios">Beneficios</a>
+                                    </div>                                                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

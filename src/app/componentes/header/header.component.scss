@@ -1,6 +1,5 @@
 nav {
     background: #00000036;
-    display: static;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -18,4 +17,15 @@ nav {
 .selected {
     font-weight: bold !important;
     border-bottom: 3.5px solid white;
+}
+
+#ul-dropdown-menu-header{
+    background-color: var(--color-ligero);
+    .vinculo_navegacion{
+        a{
+            color: var(--color-gris);
+            text-shadow: none;
+            font-weight: bold;
+        }
+    }
 }
