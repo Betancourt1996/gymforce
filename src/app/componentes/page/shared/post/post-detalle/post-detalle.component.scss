@@ -69,7 +69,7 @@
 }
 .col-contenido{
     margin: 0;
-    padding-right: 5.5rem;
+    
 }
 .autor{
     display: flex;
@@ -169,6 +169,7 @@
 }
 
 .input-search input {
+    width: 100%;
     flex: 1;
     border: none;
     padding: 8px;
@@ -197,3 +198,38 @@
     height: auto;
     
 }
+@media(max-width: 1400){
+
+}
+@media(max-width: 1200){
+
+}
+
+@media (max-width: 1024px) {
+    .contenido {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    
+  }
+  
+  @media (max-width: 768px) {
+    .contenido {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .caja{
+        padding: 2rem 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contenido {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .caja{
+        padding: 1rem 1rem;
+    }
+  }

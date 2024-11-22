@@ -123,3 +123,14 @@
     border-bottom: 3px solid black;
     padding-bottom: 1px; 
 }
+
+.logo{
+    height: 70px;    
+    width: auto;
+}
+
+@media(max-width: 480px){
+    .logo{
+        height: 55px;    
+    }
+}

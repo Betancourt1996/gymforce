@@ -137,28 +137,7 @@
         padding: 0 10px !important;
         grid-template-columns: repeat(1, 1fr);
     }
-}
-/* 
-@media (max-width: 1400px) {
-    .lista-gymnasios {
-      grid-template-columns: repeat(3, 1fr);
+    ::ng-deep #pagina-home-lista-posts-ultimos .post{
+        width: 320px !important;
     }
 }
-@media (max-width: 1200px) {
-    .lista-gymnasios {
-      height: 38rem;
-      grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 800px) {
-    .lista-gymnasios {
-      height: 58rem;
-      grid-template-columns: repeat(1, 1fr);
-    }
-}
-@media (max-width: 480px) {
-    .lista-gymnasios {
-      height: 58rem;
-      
-    }
-} */
