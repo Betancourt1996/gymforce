@@ -56,7 +56,7 @@
 }
 @media(max-width:480px){
     .carousel-item {
-        padding: 4rem 4rem;
+        padding: 3rem 3rem;
     }
     .cita::before {
         content: url("/images/icon003.png");
@@ -73,5 +73,12 @@
         flex: 0 0 auto;
         width: 33.33333333%;
     }
-
+}
+@media (max-width: 992px) {
+    .parrafo{
+        font-size: 22px;   
+    }
+    .carousel-item {
+        padding: 1rem 5rem;
+    }
 }

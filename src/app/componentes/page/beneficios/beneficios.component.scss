@@ -124,3 +124,25 @@
     font-style: italic;
     margin-right: 4rem;
 }
+  
+@media (max-width: 768px) {
+  .item-imagen-patrocinador{
+    padding: 3rem; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .item-imagen-patrocinador{
+    padding: 2rem; 
+  }
+  .div-info-beneficios{
+    padding: 1rem 0rem 1rem 1rem;
+  }
+  #hangaroa_logo{
+    box-shadow: 30px 0 0px 10px white, 30px 0px 0px 18px rgb(116, 90, 147);
+  }
+  #mcdonalds_logo{
+      box-shadow: 30px 0 0px 10px white, 30px 0px 0px 18px rgb(240, 53, 64);
+  }
+}
