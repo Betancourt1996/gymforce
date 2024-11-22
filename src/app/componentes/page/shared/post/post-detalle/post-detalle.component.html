@@ -36,33 +36,19 @@
                 </div>
                 <div class="caja mt-5">
                     <h3 class="ultimas-noticias">Últimas Noticias</h3>
-                    <div class="mini-post">
-                        <div class="imagen-mini-post">
-                            <img src="images/entrenamiento.png" alt="Post">
-                        </div>
-                        <div class="detalles-mini-post">
-                            <h4>TITULO</h4>
-                            <p>22/08/2024</p>
-                        </div>
-                    </div>
-                    <div class="mini-post">
-                        <div class="imagen-mini-post">
-                            <img src="images/post01.jpg" alt="Post">
-                        </div>
-                        <div class="detalles-mini-post">
-                            <h4>TITULO</h4>
-                            <p>22/08/2024</p>
-                        </div>
-                    </div>
-                    <div class="mini-post">
-                        <div class="imagen-mini-post">
-                            <img src="images/post01.jpg" alt="Post">
-                        </div>
-                        <div class="detalles-mini-post">
-                            <h4>TITULO</h4>
-                            <p>22/08/2024</p>
-                        </div>
-                    </div>
+                    <ng-container *ngFor="let post of ultimosPosts;">
+                        <a [routerLink]="['/noticias', post.id]">
+                            <div class="mini-post">
+                                <div class="imagen-mini-post">
+                                    <img [src]="post.imgPath"  alt="Post">
+                                </div>
+                                <div class="detalles-mini-post">
+                                    <h4>{{post.titulo}}</h4>
+                                    <p>{{post.fecha}}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </ng-container>     
                 </div>
             </div>
             

@@ -14,10 +14,10 @@ export class PostService {
       imgPath: 'images/entrenamiento.png',
       texto: `<p>Beneficios del Entrenamiento Diario 💪</p>
       <p>Hacer ejercicio a diario no solo mejora tu condición física, sino también tu salud mental y emocional. Una rutina constante te ayuda a aumentar tu energía, fortalecer tu sistema inmunológico y reducir el estrés. Además, el entrenamiento regular mejora la calidad del sueño, acelera tu metabolismo y tonifica tus músculos, dándote esa sensación de bienestar que impulsa tu día. 🏋️‍♂️✨</p>
-      <p>Tips para una Rutina Efectiva 📋
-        1️⃣ Establece horarios fijos para entrenar y conviértelos en parte de tu día.
-        2️⃣ Mezcla ejercicios cardiovasculares con fuerza para un entrenamiento completo.
-        3️⃣ Hidrátate bien y lleva una dieta equilibrada que complemente tu rutina.
+      <p>Tips para una Rutina Efectiva 📋<br>
+        1️⃣ Establece horarios fijos para entrenar y conviértelos en parte de tu día.<br>
+        2️⃣ Mezcla ejercicios cardiovasculares con fuerza para un entrenamiento completo.<br>
+        3️⃣ Hidrátate bien y lleva una dieta equilibrada que complemente tu rutina.<br>
         4️⃣ Escucha a tu cuerpo; descansa cuando sea necesario para evitar lesiones.</p>
         <p>La clave está en la constancia y en adaptar tu rutina a tus objetivos personales. 🎯🏃‍♀️</p>
         <p>¿Por qué elegir Force Gym? 🏋️‍♀️</p>
@@ -44,10 +44,10 @@ export class PostService {
       imgPath: 'images/cardio.jpeg',
       texto: `<p>Cardio y Sus Beneficios: ¡Transforma Tu Vida! 🏃‍♂️💓</p>
       <p>El ejercicio cardiovascular es una de las mejores formas de mantener tu corazón sano y tu cuerpo en movimiento. Al practicar cardio regularmente, mejoras tu resistencia, quemas calorías, reduces el estrés y fortaleces todo tu sistema cardiovascular. Es la manera perfecta de activar tu cuerpo y sentirte lleno de energía cada día. 💪✨</p>
-      <p>Beneficios del Cardio 🏋️‍♀️
-      1️⃣ Fortalece el corazón y los pulmones, mejorando tu salud en general.
-      2️⃣ Quema calorías de forma eficiente, ayudándote a alcanzar tus metas de peso.
-      3️⃣ Reduce el estrés y mejora tu estado de ánimo gracias a la liberación de endorfinas.
+      <p>Beneficios del Cardio 🏋️‍♀️<br>
+      1️⃣ Fortalece el corazón y los pulmones, mejorando tu salud en general.<br>
+      2️⃣ Quema calorías de forma eficiente, ayudándote a alcanzar tus metas de peso.<br>
+      3️⃣ Reduce el estrés y mejora tu estado de ánimo gracias a la liberación de endorfinas.<br>
       4️⃣ Aumenta tu resistencia y energía, haciéndote sentir más fuerte en tu día a día</p>
       <p>¡En Force Gym Tenemos Planes para Ti! 💥</p>
       <p>En Force Gym, diseñamos planes de cardio personalizados que se adaptan a tus necesidades y objetivos. Con el equipo más moderno, entrenadores expertos y un ambiente motivador, te ayudaremos a transformar tu vida y alcanzar el mejor estado físico de tu vida. ¡Es momento de dar el primer paso! 🚴‍♀️🔥</p>

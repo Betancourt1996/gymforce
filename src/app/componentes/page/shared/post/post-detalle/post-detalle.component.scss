@@ -120,6 +120,7 @@
     justify-content: center;
     width: 100px;
     height: 100px;
+    aspect-ratio: 1 / 1;
     img{
         border-radius: 50%;
         width: 100%;
@@ -139,6 +140,7 @@
         font-size: 18px;
         position: relative;
         display: inline-block;
+        color: black;
     }
     h4::after {
         content: '';

@@ -26,6 +26,6 @@ abrirFileExplorer() {
   };
 
   enviarForm(){
-    console.log("enviar")
+    console.log("enviar") 
   }
 }
