@@ -1,4 +1,4 @@
-.lista-gymasios{
+.lista-gymnasios{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
@@ -6,24 +6,27 @@
     height: 300px;
     justify-items: center;
 }
-.gymnasio {
+.gymnasio{
+    width: 400px;
+}
+.imagen-gym {
     position: relative; 
     display: inline-block;
 }
 
-.gymnasio img {
+.imagen-gym img {
     width: 100%;
     display: block;
 }
 
 .gym-tarjeta {
     position: absolute;
-    top: 100%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
-    width: 300px;
-    height: 130px;
+    width: 75%;
+    height: auto;
     padding: 20px 20px;
     align-items: center;
     text-align: center;
@@ -44,4 +47,31 @@
     font-size: 20px;
     font-weight: bold;    
     margin-bottom: 10px;
+}
+
+@media (max-width: 1400px) {
+    .lista-gymnasios {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 1200px) {
+    .lista-gymnasios {
+      height: 38rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 800px) {
+    .lista-gymnasios {
+      height: 58rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .lista-gymnasios {
+      height: 58rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .gymnasio{
+        width: 300px;
+    }
 }

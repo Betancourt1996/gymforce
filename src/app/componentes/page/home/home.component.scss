@@ -88,6 +88,7 @@
     }
     .fotos{
         padding: 0 10rem !important;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -101,6 +102,10 @@
     .fotos{
         padding: 0 8rem !important;
     }
+    .div-posts{
+        padding: 0 8rem !important;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 700px) {
@@ -113,4 +118,47 @@
     .fotos{
         padding: 0 2rem !important;
     }
+    .div-posts{
+        padding: 0 2rem !important;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
+@media (max-width: 480px) {
+    .padding-pagina {
+        padding: 0 1rem;
+    }
+    .titulo-frase {
+        padding-top: 3rem;
+    }
+    .fotos{
+        padding: 0 2rem !important;
+    }
+    .div-posts{
+        padding: 0 10px !important;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* 
+@media (max-width: 1400px) {
+    .lista-gymnasios {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 1200px) {
+    .lista-gymnasios {
+      height: 38rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 800px) {
+    .lista-gymnasios {
+      height: 58rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .lista-gymnasios {
+      height: 58rem;
+      
+    }
+} */

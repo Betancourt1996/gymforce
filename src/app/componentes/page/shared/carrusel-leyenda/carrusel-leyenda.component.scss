@@ -40,7 +40,6 @@
     position: relative; 
     text-align: center;
 }
-
 .cita::before {
     content: url("/images/icon003.png");
     scale: 0.8;
@@ -50,7 +49,29 @@
     left: 46%;
     transform: translate(-50%, -50%);
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(0%) brightness(0%);
+}
+@media(max-width:480px){
+    .carousel-item {
+        padding: 4rem 4rem;
+    }
+    .cita::before {
+        content: url("/images/icon003.png");
+        scale: 0.6;
+        position: absolute;
+        z-index: 1;
+        top: 40%;
+        left: 38%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+
 }

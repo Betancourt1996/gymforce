@@ -6,3 +6,17 @@
     font-weight: bold;
     font-style: italic;
 }
+.logo-footer{
+    height: 70px;    
+}
+.btnUpFooter{
+    width: 120px;
+}
+@media(max-width: 1000px){
+    .logo-footer{
+        height: 35px;    
+    }
+    .btnUpFooter{
+        width: 80px;
+    }
+}

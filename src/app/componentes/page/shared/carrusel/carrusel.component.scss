@@ -1,6 +1,5 @@
 .contenido{
-    width: 600px;
-    height: 300px;
+    aspect-ratio: 2/1;
     overflow: hidden; 
     position: relative;
 }
@@ -29,3 +28,11 @@
     width: 9px;
     scale: 2;
 }
+/* @media (min-width: 1199px) {
+    .contenido {
+      width: 600px;
+      height: 300px;
+      aspect-ratio: unset;
+    }
+}
+   */

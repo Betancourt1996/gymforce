@@ -29,3 +29,12 @@ nav {
         }
     }
 }
+.logo-header{
+    width: auto;
+    height: 70px;    
+}
+@media(max-width: 480px){
+    .logo-header{
+        height: 35px;    
+    }
+}

@@ -49,12 +49,12 @@ export class CarruselComponent implements OnInit {
     },
     {
       id: '1005',      
-      name: 'Bailoterapia',      
+      name: 'StepBoxing',      
       image: 'images/002.jpg'
     },
     {
       id: '1006',      
-      name: 'Bailoterapia',      
+      name: 'Crossfit',      
       image: 'images/002.jpg'
     }
   ]; 
@@ -69,7 +69,7 @@ export class CarruselComponent implements OnInit {
     this.responsiveOptions = [
       {
           breakpoint: '1199px',
-          numVisible: 3, // Cambiado para forzar 3 elementos
+          numVisible: 3,
           numScroll: 1
       },
       {
