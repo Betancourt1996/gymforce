@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
-import { Map, MapStyle, Marker, config } from '@maptiler/sdk';
-import '@maptiler/sdk/dist/maptiler-sdk.css';
+import maplibregl, { Map, Marker } from 'maplibre-gl';
 import { FooterComponent } from "../../footer/footer.component";
 import { CarruselSedeComponent } from "../shared/carrusel-sede/carrusel-sede.component";
 import { ContactoFormComponent } from "../shared/contacto-form/contacto-form.component";
@@ -12,27 +11,20 @@ import { ContactoFormComponent } from "../shared/contacto-form/contacto-form.com
   templateUrl: './sede.component.html',
   styleUrl: './sede.component.scss'
 })
-export class SedeComponent implements OnInit, AfterViewInit, OnDestroy {
-  map: Map | undefined;
-  @ViewChild('map')
-  private mapContainer!: ElementRef<HTMLElement>;
-  ngOnInit(): void {
-    config.apiKey = 'uyW0XCa9sIcc2L4D5SZS';
-  }
+export class SedeComponent implements  AfterViewInit {
+  @ViewChild('mapa', { static: true }) mapaContainer!: ElementRef;
+  map!: Map;
+
   ngAfterViewInit() {
-    const initialState = { lng: -79.9091878, lat: -2.1416158, zoom: 15 };
-  
-    this.map = new Map({
-      container: this.mapContainer.nativeElement,
-      style: MapStyle.STREETS,
-      center: [initialState.lng, initialState.lat],
-      zoom: initialState.zoom
+    this.map = new maplibregl.Map({
+      container: this.mapaContainer.nativeElement,
+      style:  'https://api.maptiler.com/maps/streets/style.json?key=uyW0XCa9sIcc2L4D5SZS',
+      center: [-79.9091878, -2.1416158],
+      zoom: 15,
     });
-    new Marker({color: "#FF0000"})
-      .setLngLat([-79.9091878,-2.1416158])
+    // Agrega un marcador
+    const marker = new maplibregl.Marker()
+      .setLngLat([-79.9091878, -2.1416158])
       .addTo(this.map);
-  }
-  ngOnDestroy() {
-    this.map?.remove();
   }
 }
