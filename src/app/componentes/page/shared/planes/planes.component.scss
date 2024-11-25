@@ -133,6 +133,17 @@
     }
 }
 
+.wrap-plan-item{
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(0%) brightness(0%);
+}
+
 @media (max-width: 1400px) {
     .tarjetas {
       grid-template-columns: repeat(3, 1fr);
@@ -147,4 +158,7 @@
     .tarjetas {
       grid-template-columns: repeat(1, 1fr);
     }
+}
+@media (max-width: 4800px) {
+
 }
