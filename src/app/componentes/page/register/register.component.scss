@@ -23,9 +23,10 @@
 .titulo-objeto{
     align-items: start;
     h1{
-      font-size: 44px;
+      font-size: 48px;
       font-weight: 600;
       color: black;
+      color: var(--color-azul);
     }
     span{
       font-style: italic;
@@ -122,6 +123,7 @@
     display: flex;
     align-items: center;
     background-color: white;
+    padding: 1rem;
 }
 .input-date-icono div label{
     margin-left: 3rem;
@@ -137,21 +139,86 @@
     
     
 }
-
-.input-date-icono input[type="date"]::-webkit-calendar-picker-indicator {
-    color: transparent;
-    background: none;
-    z-index: 1;
-  }
+.select-formulatio{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    background-color: white;    
+    i{
+        font-size: 20px;
+        color: var(--color-gris);
+        opacity: 0.5;
+    }
+    select{
+        margin-left: 1rem;
+        font-style: italic;
+        color: var(--color-gris);
+        font-weight: bold;
+        font-style: italic;
+        font-size: 19px;
+        border: none;
+        
+        option{
+            color: var(--color-gris);
+            font-style: italic;
+            font-size: 19px;
+            font-weight: bold;
+            
+        }
+    }
+}
 .input-date-icono i {
     pointer-events: none;
     position: absolute;
-    left: 94%;
+    left: 1rem;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.2em;
-    color: #666; 
+    color: #666666; 
+    opacity: 0.5;
     pointer-events: none; 
 }
-/* Date input */
+.inpFecha{
+    position: absolute;
+    opacity: 0;
+}
+.boton{
+    background-color: var(--color-azul);
+    border-color: unset;
+}
+.textInputValido{
+    font-size: 19px;
+    color: black !important;
+    font-weight: bold;
+    font-style: italic;
+    opacity: 1;
+}
+@media(max-width: 480px){
     
+    .titulo-objeto {
+            h1 {
+                font-size: 38px;
+            }
+    
+            span {
+                font-size: 14px;
+            }
+            span::before{
+                content: "";
+                width: 30px;
+                height: 2px;
+                margin-left: 0;
+                margin-right: 10px;
+              }
+        }
+    .doble-icono{
+        i:nth-of-type(2){
+            left: 85%;
+        }
+        input{
+            padding-right: 3rem;
+        }
+    }
+}

@@ -43,6 +43,7 @@
   :root {
     --color-gris: rgb(121, 124, 126);
     --color-ligero: rgb(226, 235, 242);
+    --color-azul: rgb(31, 85, 166);
   }  
 
   body {
@@ -63,7 +64,9 @@
     font-size: 14px;
     padding: 8px 30px;
   }
-
+  .boton:disabled{
+    opacity: 0.5;
+  }
   .separador{
     margin: 0;
     border: 0;

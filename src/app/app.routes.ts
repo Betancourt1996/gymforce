@@ -13,6 +13,7 @@ import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component'
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { PerfilComponent } from './componentes/page/perfil/perfil.component';
 import { AuthGuard } from 'app/guards/auth.guard';
+import { IngresarComponent } from './componentes/page/ingresar/ingresar.component';
 
 export const routes: Routes = [
   {
@@ -29,9 +30,10 @@ export const routes: Routes = [
     ]
   },
   {
-    path: '',
+    path: 'auth',
     component: AuthLayoutComponent,
     children: [
+      { path: 'ingresar', component: IngresarComponent },
       { path: 'login', component: LoginComponent },
       { path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard] }, 
       { path: 'register', component: RegisterComponent },

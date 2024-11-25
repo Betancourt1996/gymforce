@@ -1,28 +1,40 @@
 <div class="container-fluid">
     <div class="row altura-min-100">
-        <div class="col-7 d-none d-md-block pad-0 div-imagen-lateral">
-            <img src="images/007.jpg" alt="Login">
+        <div class="col-7 d-none d-lg-block pad-0 div-imagen-lateral">
+            <img src="images/FORCE02.jpg" alt="Login">
         </div>
-        <div class="col-12 col-md-5 pad-0 div-form">
-            <div class="titulo-objeto mb-5 mt-5">
+        <div class="col-12 col-lg-5 pad-0 div-form">
+            <div class="titulo-objeto mb-5 mt-3 mt-lg-5">
                 <h1>Regístrate Aquí</h1>
-                <span>EMPIEZA HOY</span>            
+                <span>EMPIEZA HOY - Datos de Facturación</span>            
             </div>
-            
+            <form [formGroup]="formulario" (ngSubmit)="enviarForm()">
             <div class="formulario">
                 <div class="row">
-                    <div class="col pad-0">
+                    <div class="col-12 col-md-6 pad-0">
                         <div class="input-formulatio input-icono">
                             <i class="bi bi-person-circle"></i>
-                            <input type="text" placeholder="Nombre y Apellido">
+                            <input type="text" placeholder="Nombres" formControlName="nombres">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 pad-0">
+                        <div class="input-formulatio input-icono">
+                            <i class="bi bi-person-circle"></i>
+                            <input type="text" placeholder="Apellidos" formControlName="apellidos">
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col pad-0">
+                    <div class="col-12 col-md-6 pad-0">
                         <div class="input-formulatio input-icono">
                             <i class="bi bi-person-circle"></i>
-                            <input type="text" placeholder="Identificación">
+                            <input type="text" placeholder="Identificación" formControlName="cedula">
+                        </div>                        
+                    </div>
+                    <div class="col-12 col-md-6 pad-0">
+                        <div class="input-formulatio input-icono">
+                            <i class="bi bi-telephone-fill"></i>
+                            <input type="tel" placeholder="Teléfono" formControlName="telefono">
                         </div>
                     </div>
                 </div>
@@ -30,50 +42,83 @@
                     <div class="col pad-0">
                         <div class="input-formulatio input-icono">
                             <i class="bi bi-envelope-fill"></i>
-                            <input type="mail" placeholder="Email">
+                            <input type="mail" placeholder="Email" formControlName="email">
                         </div>
                     </div>
                 </div>
                 <div class="row mb-0">
-                    <div class="col pad-0">
-                        <div class="input-formulatio input-icono">
-                            <i class="bi bi-lock-fill"></i>
-                            <input type="password" placeholder="Contraseña">
-                            <i class="bi bi-eye-slash-fill"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-0">
-                    <div class="col pad-0">
-                        <div class="input-formulatio input-icono">
-                            <i class="bi bi-lock-fill"></i>
-                            <input type="password" placeholder="Contraseña">
-                            <i class="bi bi-eye-slash-fill"></i>
-                            <!-- <i class="bi bi-eye-fill"></i> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-0">
-                    <div class="col pad-0">
-                        
+                    <div class="col-12 col-md-6 pad-0">                        
                         <div class="input-formulatio input-date-icono">
-                            <div class="col-8">
-                                <label>Fecha De Nacimiento</label>
-                            </div>
-                            <div class="col-4">
+                            <div class="col-12" (click)="triggerInput()">
+                                <label>
+                                    @if(formulario.get('fecha_nacimiento')?.value){
+                                        <span class="textInputValido">
+                                            {{formulario.get('fecha_nacimiento')?.value}}
+                                        </span>
+                                    }@else {
+                                        <span>
+                                            {{labelFechaNacimiento}}                                            
+                                        </span>
+                                    }
+                                </label>
                                 <i class="bi bi-calendar-week-fill"></i>
-                                <input type="date" placeholder="Fecha de Nacimiento">
-                            </div>
-                            
+                                <input type="date" #inptFecha class="inpFecha" formControlName="fecha_nacimiento">
+                            </div>                                                    
                         </div>
                     </div>
-                </div>                
+                    <div class="col-12 col-md-6 pad-0">
+                        <div class="select-formulatio">
+                            <i class="bi bi-person-circle"></i>
+                            <select class="form-select" aria-label="Default select example" formControlName="tipo">
+                                <option value="" selected>Tipo Persona</option>
+                                <option value="N">Persona Natural</option>
+                                <option value="J">Persona Jurídica </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>  
+                <div class="row mb-0">
+                    <div class="col pad-0">
+                        <div class="input-formulatio input-icono">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <input type="text" placeholder="Dirección" formControlName="direccion">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-0">
+                    <div class="col pad-0">
+                        <div class="input-formulatio input-icono doble-icono">
+                            <i class="bi bi-lock-fill"></i>                                                        
+                            <input [type]="booContrasenaVisible_1 ? 'text' : 'password'"  placeholder="Contraseña" formControlName="password_1">
+                            @if(booContrasenaVisible_1){
+                                <i class="bi bi-eye-fill clickeable" (click)="cambiarVisibilidad_1()"></i>
+                            }@else{
+                                <i class="bi bi-eye-slash-fill clickeable" (click)="cambiarVisibilidad_1()"></i>
+                            }                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-0">
+                    <div class="col pad-0">
+                        <div class="input-formulatio input-icono doble-icono">
+                            <i class="bi bi-lock-fill"></i>                            
+                            <input [type]="booContrasenaVisible_2 ? 'text' : 'password'"  placeholder="Repetir Contraseña" formControlName="password_2">
+                            @if(booContrasenaVisible_2){
+                                <i class="bi bi-eye-fill clickeable" (click)="cambiarVisibilidad_2()"></i>
+                            }@else{
+                                <i class="bi bi-eye-slash-fill clickeable" (click)="cambiarVisibilidad_2()"></i>
+                            }  
+                        </div>
+                    </div>
+                </div>
+              
                 <div class="row">
                     <div class="col-12 pad-0 div-btnenviar">
-                        <button class="boton" (click)="enviarForm()" style="font-size: 20px;">Registrar</button>
+                        <button class="boton" [disabled]="!formulario.valid" style="font-size: 20px;">Registrar</button>
                     </div>                    
                 </div>
             </div>
+            </form>
         </div>
     </div>
 </div>

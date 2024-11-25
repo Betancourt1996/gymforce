@@ -128,7 +128,10 @@
     height: 70px;    
     width: auto;
 }
-
+.boton{
+    background-color: var(--color-azul);
+    border-color: unset;
+}
 @media(max-width: 480px){
     .logo{
         height: 55px;    

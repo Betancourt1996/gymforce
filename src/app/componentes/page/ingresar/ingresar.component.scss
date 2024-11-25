@@ -1,0 +1,79 @@
+.altura-min-100{
+    min-height: 100vh;
+    background-color: var(--color-ligero);
+}
+.div-form{
+    padding: 2rem 8rem;
+}
+.div-imagen-lateral img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titulo-register{
+    margin-top: 4rem;
+    text-align: center;
+    h1{
+        font-weight: bolder;
+        border-bottom: 2px solid black;
+        padding-bottom: 1rem;
+        font-size: 2.3rem;
+    }
+}    
+.nota-register{
+    margin-top: 2rem;
+    text-align: center;
+    span{
+        font-size: 19px;
+        font-weight: 500;
+    }
+}
+.div-btnenviar{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    .boton{
+        width: 100%;
+    }
+}
+.boton{
+    background-color: var(--color-azul);
+    border-color: unset;
+}
+.div-cuenta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+}
+.ingresa-registrate{
+    font-style: italic;
+    font-size: 20px;
+}
+
+.text-subrayado{
+    color: black;
+    font-weight: 500;
+    border-bottom: 1px solid black;
+    padding-bottom: 1px; 
+    white-space: pre;
+}
+@media (max-width: 1000px) {
+    .div-form{
+        padding: 2rem 6rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .div-form{
+        padding: 2rem 4rem;
+    }
+    .div-btnenviar{
+        margin-top: 4rem;
+    }
+}
+@media (max-width: 480px) {
+    .div-form{
+        padding: 2rem 2rem;
+    }
+}
