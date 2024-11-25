@@ -15,8 +15,11 @@ nav {
 }
 
 .selected {
-    font-weight: bold !important;
-    border-bottom: 3.5px solid white;
+    span{
+
+        font-weight: bold !important;
+        border-bottom: 3.5px solid white;
+    }
 }
 
 #ul-dropdown-menu-header{
@@ -28,6 +31,9 @@ nav {
             font-weight: bold;
         }
     }
+}
+.dropdown-item:active {
+    background-color: white;
 }
 .logo-header{
     width: auto;

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-planes',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './planes.component.html',
   styleUrl: './planes.component.scss'
 })
