@@ -67,6 +67,19 @@
         left: 38%;
         transform: translate(-50%, -50%);
     }
+        
+    .nota{
+        font-size: 20px;
+    }
+
+    .nota::before{
+        content: "";
+        display: inline-block;
+        margin-left: 40px;
+        width: 20px;
+        height: 2.5px;
+        margin: 0 10px 0 0;
+    }
 }
 @media (min-width: 992px) {
     .col-lg-4 {
