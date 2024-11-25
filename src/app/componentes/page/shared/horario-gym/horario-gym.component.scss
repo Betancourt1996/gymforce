@@ -19,3 +19,66 @@ td, th{
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
+.div-tabla{
+    overflow-x: scroll;    
+    overflow-y: hidden;
+    padding-bottom: 10px;
+    
+}
+table{
+    position: relative;
+}
+.div-tabla::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+  }
+  
+.div-tabla::-webkit-scrollbar-thumb {
+    background: var(--color-gris);
+    border-radius: 4px;
+}
+thead th:nth-child(1),
+tbody td:nth-child(1) {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+@media(max-width: 1400) {
+
+}
+
+@media(max-width: 1200) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+    .tabla-horario{
+        border-spacing: 7px;
+    }
+    td, th{
+        padding: 8px;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    td, th{
+        padding: 2px;
+        text-align: center;
+        font-size: 12px;
+    }
+    td{
+        font-size: 10px;
+    }
+}

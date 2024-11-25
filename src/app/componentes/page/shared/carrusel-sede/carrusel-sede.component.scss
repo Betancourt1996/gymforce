@@ -169,7 +169,25 @@
     .sede-info {
         padding-left: 0rem;
     }
-  }
+    .div-horario{
+        padding: 0 4rem;
+    }
+    
+    h3{
+        margin: 0 10px;
+        font-size: 20px;
+    }
+    h3.activo::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 60%;
+        height: 2.5px;
+        background-color: var(--color-gris);
+    }
+}    
+ 
   
   @media (max-width: 768px) {
     .carousel-item {
@@ -181,6 +199,39 @@
     .sede-info {
         padding-left: 0rem;
     }
+    .div-horario{
+        padding: 0 2rem;
+    }
+        
+    .lista-servicios{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+        justify-content: left;
+        h3{
+            margin: 0 10px;
+            font-size: 20px;
+        }
+        h3.activo::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 60%;
+            height: 2.5px;
+            background-color: var(--color-gris);
+        }
+    }
+    .lista-servicios::-webkit-scrollbar {
+        width: 10px;
+        height: 6px;
+      }
+      
+      .lista-servicios::-webkit-scrollbar-thumb {
+        background: var(--color-gris);
+        border-radius: 4px;
+    }
+    
   }
   
   @media (max-width: 480px) {
@@ -192,5 +243,43 @@
     }
     .sede-info {
         padding-left: 0rem;
+    }
+    .div-horario{
+        padding: 0 1rem;
+    }
+    .titulo-objeto.horario{
+        span{
+            font-size: 22px;
+        }
+    }
+    .nota-foto-sede{
+        p{
+            font-size: 1rem;
+        }
+    }
+    
+    .contenedor-imagen{            
+        padding: 20px 20px 0 20px;
+    }
+    .caption-imagen{
+        padding: 8px 15px;
+        border-radius: 5px;  
+        h2{
+            font-size: 1.2rem;
+        }
+    }
+    .lista-servicios{
+        h3{
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        h3.activo::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 60%;
+            height: 2.5px;
+        }
     }
   }
