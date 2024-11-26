@@ -21,9 +21,35 @@
   
           <!-- Avatar y menú desplegable -->
           <div class="d-flex flex-row gap-3">
-            <a routerLink="/auth/perfil" routerLinkActive="selected">
-              <img src="images/avatar.png" alt="Avatar" style="width: 25px;">
-            </a>
+            @if (!isLogged){
+                <a routerLink="/auth/perfil" routerLinkActive="selected">
+                    <img src="images/avatar.png" alt="Avatar" style="width: 25px;">
+                </a>
+            }@else {
+                <div class="dropdown">
+                    <div id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a><img src="images/avatar.png" alt="Avatar" style="width: 25px;"></a>
+                    </div>
+                    <ul class="dropdown-menu" id="ul-dropdown-menu-header" aria-labelledby="dropdownMenuButton">                     
+                      <li *ngFor="let enlace of enlacesAuth">
+                        <div class="vinculo_navegacion ">
+                            <a class="dropdown-item" 
+                               routerLink="{{ enlace.path }}" 
+                               routerLinkActive="selected">
+                              <span>{{ enlace.label }}</span>
+                            </a>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="vinculo_navegacion ">
+                            <a class="dropdown-item" (click)="loggout()">
+                              <span>Cerrar Sesión</span>
+                            </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+            }
   
             <!-- Menú móvil (dropdown) -->
             <div class="d-flex d-lg-none align-items-center">                        

@@ -12,7 +12,6 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   isLoggedIn(): boolean {
-    let token = localStorage.getItem('token');
     return !!localStorage.getItem('token');
   }
 
@@ -22,6 +21,7 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('token');
+    localStorage.removeItem('user');
   }
 
   postRegister(data){
