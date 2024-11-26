@@ -1,0 +1,17 @@
+.div-loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    pointer-events: none;
+}
+.spinner-loading{
+    width: 8rem;
+    height: 8rem;
+    border-top-color: var(--color-azul);
+    border-right-color: var(--color-azul);
+    border-bottom-color: var(--color-azul);
+    border-width: 8px;
+    border-left-color: transparent; 
+}

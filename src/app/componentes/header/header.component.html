@@ -1,70 +1,53 @@
 <nav class="div-principal-header">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 p-0">
-                <div class="ps-0 ps-lg-5">
-                    <a href="/home">
-                        <img class="logo-header" src="images/LOGO.png" alt="Logo" class="ps-0 ps-lg-5">
-                    </a>
-                </div>
-            </div>
-            <div class="col-8 p-0 pe-5 gap-4 d-flex justify-content-end align-items-center">
-                <div class="d-none  vinculo_navegacion d-lg-flex gap-5 pe-3">
-                    <a routerLink="/" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}"><span>Home</span></a>
-                    <a routerLink="/sede" routerLinkActive="selected"><span>Sede</span></a>
-                    <a routerLink="/membresias" routerLinkActive="selected"><span>Membresias</span></a>
-                    <a routerLink="/noticias" routerLinkActive="selected"><span>Noticias</span></a>
-                    <a routerLink="/contacto" routerLinkActive="selected"><span>Contacto</span></a>
-                    <a routerLink="/beneficios" routerLinkActive="selected"><span>Beneficios</span></a>
-                </div>                
-                <div class="d-flex flex-row gap-3">
-                    <a routerLink="/auth/perfil" routerLinkActive="selected">
-                        <img src="images/avatar.png" alt="Avatar" style="width: 25px;">
-                    </a>
-                    <div class="d-flex d-lg-none align-items-center">                        
-                        <div class="dropdown">
-                            <div id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                <a>
-                                    <img src="images/menu.png" alt="Menu" style="width: 25px;">
-                                </a>
-                            </div>
-                            <ul class="dropdown-menu" id="ul-dropdown-menu-header" aria-labelledby="dropdownMenuButton">
-                                <li>
-                                    <div class="vinculo_navegacion">
-                                        <a class="dropdown-item" routerLink="/" routerLinkActive="selected" [routerLinkActiveOptions]="{exact: true}"><span>Home</span></a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="vinculo_navegacion">
-                                        <a class="dropdown-item" routerLink="/sede" routerLinkActive="selected"><span>Sede</span></a>
-                                    </div>                                    
-                                </li>
-                                <li>
-                                    <div class="vinculo_navegacion">
-                                        <a class="dropdown-item" routerLink="/membresias" routerLinkActive="selected"><span>Membresias</span></a>
-                                    </div>                                    
-                                </li>
-                                <li>
-                                    <div class="vinculo_navegacion">
-                                        <a class="dropdown-item" routerLink="/noticias" routerLinkActive="selected"><span>Noticias</span></a>
-                                    </div>                                    
-                                </li>
-                                <li>
-                                    <div class="vinculo_navegacion">
-                                        <a class="dropdown-item" routerLink="/contacto" routerLinkActive="selected"><span>Contacto</span></a>
-                                    </div>                                    
-                                </li>
-                                <li>
-                                    <div class="vinculo_navegacion">
-                                        <a class="dropdown-item" routerLink="/beneficios" routerLinkActive="selected"><span>Beneficios</span></a>
-                                    </div>                                                                    
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+      <div class="row">
+        <!-- Logo -->
+        <div class="col-4 p-0 ps-0 ps-lg-5">
+          <a routerLink="/home">
+            <img class="logo-header" src="images/LOGO.png" alt="Logo">
+          </a>
         </div>
+  
+        <!-- Navegación principal -->
+        <div class="col-8 p-0 pe-5 gap-4 d-flex justify-content-end align-items-center">
+          <div class="d-none d-lg-flex gap-5 pe-3 vinculo_navegacion ">
+            <a *ngFor="let enlace of enlaces" 
+               routerLink="{{ enlace.path }}" 
+               routerLinkActive="selected" 
+               [routerLinkActiveOptions]="{exact: enlace.exact || false}">
+              <span>{{ enlace.label }}</span>
+            </a>
+          </div>                
+  
+          <!-- Avatar y menú desplegable -->
+          <div class="d-flex flex-row gap-3">
+            <a routerLink="/auth/perfil" routerLinkActive="selected">
+              <img src="images/avatar.png" alt="Avatar" style="width: 25px;">
+            </a>
+  
+            <!-- Menú móvil (dropdown) -->
+            <div class="d-flex d-lg-none align-items-center">                        
+              <div class="dropdown">
+                <div id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a><img src="images/menu.png" alt="Menu" style="width: 25px;"></a>
+                </div>
+                <ul class="dropdown-menu" id="ul-dropdown-menu-header" aria-labelledby="dropdownMenuButton">
+                  <li *ngFor="let enlace of enlaces">
+                    <div class="vinculo_navegacion ">
+                        <a class="dropdown-item" 
+                           routerLink="{{ enlace.path }}" 
+                           routerLinkActive="selected" 
+                           [routerLinkActiveOptions]="{exact: enlace.exact || false}">
+                          <span>{{ enlace.label }}</span>
+                        </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
     </div>
-</nav>
+  </nav>
+  

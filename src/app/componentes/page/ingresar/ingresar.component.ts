@@ -9,10 +9,11 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './ingresar.component.scss'
 })
 export class IngresarComponent {
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router, 
+    ) { }
   
   enviarForm(){
-    console.log("enviar")
     this.router.navigate(['/']);
   }
 }

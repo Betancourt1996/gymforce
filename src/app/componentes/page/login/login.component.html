@@ -1,3 +1,5 @@
+<app-loading *ngIf="loading"/>
+<p-toast></p-toast>
 <div class="container-fluid overflow-x-hidden">
     <div class="row altura-min-100">
         <div class="col-7 d-none d-md-block pad-0 div-imagen-lateral">
@@ -44,7 +46,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12 pad-0 div-btnenviar">
-                            <button class="boton" [disabled]="!formulario.valid" style="font-size: 20px;">Iniciar Sesión</button>
+                            <button class="boton" [disabled]="!formulario.valid || loading" style="font-size: 20px;">Iniciar Sesión</button>
                         </div>                    
                         <div class="col-12 d-flex justify-content-end">
                             <a routerLink="/auth/register">
