@@ -6,7 +6,7 @@ import { MessageService } from 'primeng/api';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanActivate {
+export class MainGuard implements CanActivate {
 
   constructor(private router: Router, private messageService: MessageService) {} // Inyecta MessageService
   canActivate(): boolean {
@@ -14,7 +14,10 @@ export class AuthGuard implements CanActivate {
     if (token) {
       return true;
     } else {
-      this.router.navigate(['/auth/ingresar']);
+      this.messageService.add({
+        severity: 'error',
+        detail: 'Debe iniciar sesión para continuar.'
+      });
       return false;
     }
   }

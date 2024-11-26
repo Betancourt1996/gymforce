@@ -4,12 +4,11 @@ import { Router, RouterLink } from '@angular/router';
 import { AuthService } from 'app/services/auth.service';
 import { LoadingComponent } from "../shared/loading/loading.component";
 import { CommonModule } from '@angular/common';
-import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-login',
-  providers: [MessageService],
   standalone: true,
   imports: [
     RouterLink, 

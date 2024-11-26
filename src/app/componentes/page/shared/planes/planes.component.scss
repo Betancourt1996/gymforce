@@ -15,7 +15,7 @@
     flex-direction: column;
     .espacio{
         height: 16px;
-        background-color: var(--color-ligero);
+        background-color: var(--color-azul);
     }
     .contenido-card{
         display: flex;
@@ -104,6 +104,8 @@
             align-self: center;
             padding: 8px 30px;
             box-shadow: 10px 10px 0px -5px #ffffff, 10px 10px 0px -4px #000000;
+            background-color: var(--color-azul);
+            border: unset;
         }
     
     }

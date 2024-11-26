@@ -14,6 +14,7 @@ import { MainLayoutComponent } from './layout/main-layout/main-layout.component'
 import { PerfilComponent } from './componentes/page/perfil/perfil.component';
 import { AuthGuard } from 'app/guards/auth.guard';
 import { IngresarComponent } from './componentes/page/ingresar/ingresar.component';
+import { MainGuard } from './guards/main.guard';
 
 export const routes: Routes = [
   {
@@ -25,7 +26,7 @@ export const routes: Routes = [
       { path: 'noticias/:id', component: PostDetalleComponent },
       { path: 'contacto', component: ContactoComponent },
       { path: 'sede', component: SedeComponent },
-      { path: 'membresias', component: MembresiaComponent },
+      { path: 'membresias', component: MembresiaComponent, canActivate: [MainGuard] }, 
       { path: 'beneficios', component: BeneficiosComponent },
     ]
   },
