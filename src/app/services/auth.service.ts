@@ -11,17 +11,28 @@ export class AuthService {
   URL_API = this.URL_BASE + "/api/";
   constructor(private http: HttpClient) {}
 
-  isLoggedIn(): boolean {
-    return !!localStorage.getItem('token');
+  getToken(): string | null {
+    return localStorage.getItem('token') || sessionStorage.getItem('token');
   }
 
-  postLogin(data) {
-    return this.http.post(this.URL_API + "login/", data)
+  getUser(): any | null {    
+    let userJson = localStorage.getItem('user') || sessionStorage.getItem('user');
+    return JSON.parse(userJson);
+  }
+
+  isLoggedIn(): boolean {
+    return !!this.getToken();
   }
 
   logout(): void {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('user');
+  }
+
+  postLogin(data) {
+    return this.http.post(this.URL_API + "login/", data)
   }
 
   postRegister(data){

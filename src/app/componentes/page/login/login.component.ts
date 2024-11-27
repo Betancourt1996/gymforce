@@ -38,15 +38,20 @@ export class LoginComponent implements OnInit {
 
   enviarForm(){    
     const dataFormulario = this.formulario.getRawValue();
-    const { username, password } = dataFormulario;
+    const { username, password, remember } = dataFormulario;
     const loginData = { username, password };  
     this.loading = true;
     this.authService.postLogin(loginData).subscribe({
       next: (res) => {
         console.log(res)
         const userJson = JSON.stringify(res["user"]);
-        localStorage.setItem("token", res["token"])
-        localStorage.setItem("user", userJson)
+        if (remember) {
+          localStorage.setItem("token", res["token"])
+          localStorage.setItem("user", userJson)
+        } else {
+          sessionStorage.setItem("token", res["token"])
+          sessionStorage.setItem("user", userJson)
+        }
         this.router.navigate(['/']);
         this.loading = false;        
       },

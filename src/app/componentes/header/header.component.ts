@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from 'app/services/auth.service';
 
@@ -10,13 +10,23 @@ import { AuthService } from 'app/services/auth.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isLogged = false
+  sticky: boolean = false;
+  headerOffsetTop: number = 0;
+
   constructor(
     private router: Router, 
     private authService: AuthService) { 
       this.isLogged = this.authService.isLoggedIn();
     }
+
+  ngOnInit(): void {
+    const header = document.getElementById('myHeader');
+    if (header) {
+      this.headerOffsetTop = header.offsetTop;
+    }
+  }
   enlaces = [
     { path: '/', label: 'Home', exact: true },
     { path: '/sede', label: 'Sede' },
@@ -34,4 +44,15 @@ export class HeaderComponent {
     this.router.navigate(['/']);
     window.location.reload();
   }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const header = document.getElementById('myHeader');
+    if (window.scrollY > this.headerOffsetTop) {
+      header?.classList.add('sticky');
+    } else {
+      header?.classList.remove('sticky');
+    }
+  }
+
 }

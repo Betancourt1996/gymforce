@@ -1,15 +1,20 @@
 nav {
-    background: #00000036;
-    position: fixed;
+    background: rgb(0, 0, 0, 1);
     width: 100%;
-    z-index: 100;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+  }
 
 .vinculo_navegacion{
     font-size: 14px;
     a{
         color: white;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        
         text-decoration: none;
     }
 }

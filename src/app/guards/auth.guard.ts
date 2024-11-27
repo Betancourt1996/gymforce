@@ -8,10 +8,13 @@ import { MessageService } from 'primeng/api';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(private router: Router, private messageService: MessageService) {} // Inyecta MessageService
+  constructor(
+    private router: Router, 
+    private messageService: MessageService,
+    private authService: AuthService) {}
   canActivate(): boolean {
-    let token = !!localStorage.getItem('token');
-    if (token) {
+    let logeado = this.authService.isLoggedIn()
+    if (logeado) {
       return true;
     } else {
       this.router.navigate(['/auth/ingresar']);
