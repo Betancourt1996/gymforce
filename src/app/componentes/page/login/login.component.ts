@@ -26,7 +26,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router, 
     private authService: AuthService, 
-    private messageService: MessageService) { }
+    private messageService: MessageService
+  ) { }
 
   ngOnInit(): void {
     this.formulario = new FormGroup({

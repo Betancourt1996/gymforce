@@ -8,6 +8,7 @@ import { PostComponent } from "../shared/post/post.component";
 import { FooterComponent } from "../../footer/footer.component";
 import { PostService } from 'app/services/post.service';
 import { RouterModule } from '@angular/router';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-home',
@@ -31,7 +32,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private postService: PostService,
-    
+    private messageService: MessageService,
   ) {}
   
   ngOnInit() {
@@ -39,9 +40,22 @@ export class HomeComponent implements OnInit {
   }
 
   obtenerUltimosPosts(){
-    this.postService.getUltimosPost().subscribe(data => {
+    this.postService.getUltimosPost().subscribe({
+      next: (data) => {
       this.posts = data;
       console.log(this.posts);
+      },
+      error: (error) => {
+        console.log(error)
+        this.muestraError("Error al comunicarse con el servidor.");
+      }
     });
+  }
+
+  muestraError(error){
+    this.messageService.add({ severity: 'error', summary: 'Error', detail: error });
+  }
+  muestraMensaje(titulo, mensaje) {
+    this.messageService.add({ severity: 'secondary', summary: titulo, detail: mensaje });
   }
 }

@@ -84,24 +84,24 @@ export class MembresiaComponent implements OnInit{
   // Definimos las etapas del Stepper
   items = [
     { 
-      label: 'Gimnasio',
+      //label: 'Gimnasio',      
       ruta: '/membresias/gymnasio',
     },
     { 
-      label: 'Membresía',
+      //label: 'Membresía',
       ruta: '/membresias/planes',
       
     },
     { 
-      label: 'Pago',
+      //label: 'Pago',
       ruta: '/membresias/pagos',
     },
     { 
-      label: 'Resumen',
+      //label: 'Resumen',
       ruta: '/membresias/resumen',
     },
     { 
-      label: 'Confirmar',
+      //label: 'Confirmar',
       ruta: '/membresias/confirmacion',
     }
   ];

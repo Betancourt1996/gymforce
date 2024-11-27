@@ -133,17 +133,17 @@
     h1{
       font-size: 2rem;
     }
-    span{
+    >span{
       font-size: 20px;
     }
-    span::before{
+    >span::before{
       content: "";
       display: inline-block;
       width: 20px;
       height: 2px;
       margin: 0 10px 0 0;
     }
-    span::after{
+    >span::after{
       content: "";
       display: inline-block;
       width: 20px;
