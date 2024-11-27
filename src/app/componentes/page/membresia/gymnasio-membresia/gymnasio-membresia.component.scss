@@ -1,0 +1,35 @@
+.div-encabezado-listo-para-empezar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-ligero);
+    background-image: url("/images/005.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.padding-pagina, .encabezado-contenido-membresia {
+    padding: 0 5rem;
+}
+.div-contenido-membresia{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+@media (max-width: 1400px) {
+    .padding-pagina, .encabezado-contenido-membresia {
+        padding: 0 3rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .padding-pagina, .encabezado-contenido-membresia {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .padding-pagina, .encabezado-contenido-membresia {
+        padding: 0 1rem;
+    }
+}

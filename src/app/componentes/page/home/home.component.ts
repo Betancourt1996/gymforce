@@ -7,11 +7,21 @@ import { CarruselLeyendaComponent } from "../shared/carrusel-leyenda/carrusel-le
 import { PostComponent } from "../shared/post/post.component";
 import { FooterComponent } from "../../footer/footer.component";
 import { PostService } from 'app/services/post.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, PlanesComponent, CarruselComponent, GymsComponent, CarruselLeyendaComponent, PostComponent, FooterComponent],
+  imports: [
+    CommonModule, 
+    PlanesComponent, 
+    CarruselComponent, 
+    GymsComponent, 
+    CarruselLeyendaComponent, 
+    PostComponent, 
+    FooterComponent,
+    RouterModule
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -19,7 +29,10 @@ import { PostService } from 'app/services/post.service';
 export class HomeComponent implements OnInit {
   posts: any[] = [];
 
-  constructor(private postService: PostService) {}
+  constructor(
+    private postService: PostService,
+    
+  ) {}
   
   ngOnInit() {
     this.obtenerUltimosPosts();

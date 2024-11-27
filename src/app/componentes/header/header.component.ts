@@ -11,16 +11,17 @@ import { AuthService } from 'app/services/auth.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
-  isLogged = false
   sticky: boolean = false;
   headerOffsetTop: number = 0;
 
   constructor(
     private router: Router, 
-    private authService: AuthService) { 
-      this.isLogged = this.authService.isLoggedIn();
-    }
+    private authService: AuthService
+  ) { }
 
+  estaLogueado(): boolean{
+    return this.authService.isLoggedIn();
+  }
   ngOnInit(): void {
     const header = document.getElementById('myHeader');
     if (header) {
@@ -41,8 +42,7 @@ export class HeaderComponent implements OnInit {
 
   loggout(){
     this.authService.logout();
-    this.router.navigate(['/']);
-    window.location.reload();
+    this.router.navigate(['/']);    
   }
 
   @HostListener('window:scroll', [])

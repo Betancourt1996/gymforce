@@ -1,20 +1,72 @@
-<div class="row g-0 d-flex justify-content-center g-5">
-    <div class="col-6 col-lg-12 gymnasio">
-        <div class="imagen-gym">
-            <img src="images/gym01.png" alt="Gymnasio">
-            <div class="gym-tarjeta">
-                <img src="images/icon001.png" alt="Gymnasio">
-                <h3>Bamboo Plaza - Vía la costa</h3>
+<div class="container-fluid p-0 m-0">
+    <div class="row g-0 d-flex justify-content-center g-5">
+        <div class="col-12 col-lg-6 p-0 gymnasio">
+            <div class="imagen-gym">
+                <img src="images/gym01.png" alt="Gymnasio">
+                <div class="gym-tarjeta row">
+                    <div class="col-3">
+                        <img src="images/icon001.png" alt="Gymnasio">
+                    </div>
+                    <div class="col-9 text-start">
+                        <h3>URDESA</h3>
+                    </div>                    
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="col-6 col-lg-12 gymnasio">
-        <div class="imagen-gym">
-            <img src="images/gym02.png" alt="Gymnasio">
-            <div class="gym-tarjeta">
-                <img src="images/icon001.png" alt="Gymnasio">
-                <h3>Urdesa</h3>
+            @if (booComprarMembresia){
+            <div class="div-boton-seleccionar mt-5">
+                <button class="boton btnSeleccionar" (click)="seleccionarGym(1)">                    
+                    <span>
+                        SELECCIONAR
+                    </span>
+                    <i class="bi bi-arrow-right"></i>
+                </button>
             </div>
+            }@else {
+                <a routerLink="/auth/register">
+                    <div class="div-boton-seleccionar mt-5">
+                        <button class="boton btnSeleccionar">
+                            <span>
+                                MÁS INFORMACIÓN
+                            </span>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>                    
+                </a>
+            }
         </div>
-    </div>
+        <div class="col-12 col-lg-6 p-0 gymnasio">
+            <div class="imagen-gym">
+                <img src="images/gym02.png" alt="Gymnasio">
+                <div class="gym-tarjeta row">
+                    <div class="col-3">
+                        <img src="images/icon001.png" alt="Gymnasio">
+                    </div>
+                    <div class="col-9 text-start">                        
+                        <h3>VÍA LA COSTA</h3>
+                    </div>                    
+                </div>
+            </div>
+            @if (booComprarMembresia){
+            <div class="div-boton-seleccionar mt-5">
+                <button class="boton btnSeleccionar" (click)="seleccionarGym(2)">
+                    <span>
+                        SELECCIONAR
+                    </span>
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+            }@else {
+                <a routerLink="/auth/register">
+                    <div class="div-boton-seleccionar mt-5">
+                        <button class="boton btnSeleccionar">
+                            <span>
+                                MÁS INFORMACIÓN
+                            </span>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>                    
+                </a>
+            }
+        </div>
+    </div>    
 </div>

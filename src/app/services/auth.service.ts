@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  //URL_BASE = "https://testnovagym2024.pythonanywhere.com";
-  URL_BASE = "http://127.0.0.1:8000";
+  URL_BASE = "https://testnovagym2024.pythonanywhere.com";
+  //URL_BASE = "http://127.0.0.1:8000";
 
   URL_API = this.URL_BASE + "/api/";
   constructor(private http: HttpClient) {}
@@ -32,7 +32,7 @@ export class AuthService {
   }
 
   postLogin(data) {
-    return this.http.post(this.URL_API + "login/", data)
+    return this.http.post(this.URL_API + "inicio-sesion/", data)
   }
 
   postRegister(data){

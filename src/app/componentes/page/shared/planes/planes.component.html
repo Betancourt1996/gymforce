@@ -73,7 +73,13 @@
               <li>Elimina tu Plan cuando desees</li>
               <li>Parqueo GRATIS</li>
             </ul>
-            <button class="boton btnInscribete">¡INSCRÍBETE!</button>
+            @if(booComprarMembresia){
+                <button class="boton btnInscribete" (click)="seleccionarPlan(1)">SELECCIONAR PLAN</button>
+            }@else {
+                <a routerLink="/auth/register">
+                    <button class="boton btnInscribete">¡INSCRÍBETE!</button>
+                </a>
+            }
         </div>
     </div>
 </ng-template>
@@ -100,7 +106,13 @@
               <li class="li-horario">Horario libre de Ingreso</li>              
               <li>Parqueo GRATIS</li>
             </ul>
-            <button class="boton btnInscribete">¡INSCRÍBETE!</button>
+            @if(booComprarMembresia){
+                <button class="boton btnInscribete" (click)="seleccionarPlan(1)">SELECCIONAR PLAN</button>
+            }@else {
+                <a href="/auth/register">
+                    <button class="boton btnInscribete">¡INSCRÍBETE!</button>
+                </a>
+            }
         </div>
     </div>
 </ng-template>
@@ -127,7 +139,13 @@
               <li class="li-horario">Horario de Ingreso <br> 10am - 2pm (fds libre)</li>              
               <li>Parqueo GRATIS</li>
             </ul>
-            <button class="boton btnInscribete">¡INSCRÍBETE!</button>
+            @if(booComprarMembresia){
+                <button class="boton btnInscribete" (click)="seleccionarPlan(1)">SELECCIONAR PLAN</button>
+            }@else {
+                <a href="/auth/register">
+                    <button class="boton btnInscribete">¡INSCRÍBETE!</button>
+                </a>
+            }
         </div>
     </div>
 </ng-template>
@@ -155,7 +173,13 @@
               <li class="li-horario">Horario de ingreso 8am a 4pm (fds horario libre)</li>
               <li>Elimina tu Plan cuando desees</li>
             </ul>
-            <button class="boton btnInscribete">¡INSCRÍBETE!</button>
+            @if(booComprarMembresia){
+                <button class="boton btnInscribete" (click)="seleccionarPlan(1)">SELECCIONAR PLAN</button>
+            }@else {
+                <a href="/auth/register">
+                    <button class="boton btnInscribete">¡INSCRÍBETE!</button>
+                </a>
+            }
         </div>
     </div>
 </ng-template>

@@ -84,14 +84,14 @@
     h1{
       font-size: 3rem;
     }
-    span{
+    >span{
       font-style: italic;
       color: var(--color-gris);
       font-weight: 500;
       font-size: 26px;
       position: relative;
     }
-    span::before{
+    >span::before{
       content: "";
       display: inline-block;
       margin-left: 40px;
@@ -101,7 +101,7 @@
       vertical-align: middle;
       margin: 0 20px;
     }
-    span::after{
+    >span::after{
       content: "";
       display: inline-block;
       width: 40px;

@@ -26,7 +26,12 @@ export const routes: Routes = [
       { path: 'noticias/:id', component: PostDetalleComponent },
       { path: 'contacto', component: ContactoComponent },
       { path: 'sede', component: SedeComponent },
-      { path: 'membresias', component: MembresiaComponent, canActivate: [MainGuard] }, 
+      //{ path: 'membresias', component: MembresiaComponent, canActivate: [MainGuard] },
+      {
+        path: 'membresias',
+        canActivate: [MainGuard],
+        loadChildren: () => import('./rutas/membresias.routes').then(m => m.membresiasRoutes)
+      },
       { path: 'beneficios', component: BeneficiosComponent },
     ]
   },

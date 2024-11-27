@@ -1,36 +1,44 @@
-<div class="container-fluid p-0 m-0">
-    <div class="col p-0 m-0">
-      <div class="div-encabezado">
-        <div class="titulo-objeto mb-5">
-            <h1>BUSCA TU PLAN PERFECTO</h1>
-            <span>PLANES</span>            
-        </div>
-      </div>
+<div class="mt-3 mt-lg-5" id="stepperPersonalizadoPago">
+  <p-steps [model]="items" [activeIndex]="activeIndex"  styleClass="custom-steps"></p-steps>
+</div>
 
-      <hr class="separador">
+<div class="mt-3 mt-lg-5 step-content d-flex justify-content-around">
+  <div *ngIf="activeIndex === 0">    
+    <!-- Contenido para seleccionar el gimnasio -->
+    <button pButton label="Siguiente" (click)="nextStep()"></button>
+  </div>
 
-      <div class="div-planes">
-       <div class="encabezado-planes">
-            <div class="mt-2">
-                <span class="raya">TABLA DE PRECIOS </span>
-            </div>
-            <div class="mt-2">
-                <span class="titulo-planes">PLANES</span>
-            </div>
-       </div>
-        <div class="padding-pagina">
-            <app-planes/>
-          </div>
-      </div>
-      
-      <div class="div-encabezado-listo-para-empezar">
-        <div class="titulo-objeto mb-5">
-            <h1>LISTO PARA EMPEZAR?</h1>
-            <span>ES HOY</span>            
-        </div>
-      </div>
-      <hr class="separador">
-      
-      <app-footer></app-footer>
+  <div *ngIf="activeIndex === 1">    
+    <!-- Contenido para seleccionar la membresía -->
+    <button pButton label="Anterior" (click)="previousStep()"></button>
+    <button pButton label="Siguiente" (click)="nextStep()"></button>
+  </div>
+
+  <div *ngIf="activeIndex === 2">    
+    <!-- Formulario de pago o selección de tarjeta -->
+    <button pButton label="Anterior" (click)="previousStep()"></button>
+    <button pButton label="Siguiente" (click)="nextStep()"></button>
+  </div>
+  <div *ngIf="activeIndex === 3">    
+    <!-- Formulario de pago o selección de tarjeta -->
+    <button pButton label="Anterior" (click)="previousStep()"></button>
+    <button pButton label="Siguiente" (click)="nextStep()"></button>
+  </div>
+
+  <div *ngIf="activeIndex === 4">    
+    <!-- Resumen de la compra -->
+    <button pButton label="Anterior" (click)="previousStep()"></button>
+    <button pButton label="Confirmar Compra"></button>
+  </div>
+</div>
+<div class="mt-3 mt-lg-5">
+  <router-outlet></router-outlet>
+  <div class="div-encabezado-listo-para-empezar mt-3 mt-lg-5">
+    <div class="titulo-objeto mb-5">
+        <h1>LISTO PARA EMPEZAR?</h1>
+        <span>ES HOY</span>            
     </div>
   </div>
+  <hr class="separador">      
+  <app-footer></app-footer>
+</div>

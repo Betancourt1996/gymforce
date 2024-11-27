@@ -12,15 +12,19 @@
                     </h1>
                 </div>
                 <div class="pt-1 pt-lg-3">
+                  <a routerLink ="/auth/register">
                     <button class="boton inscribete m-0">¡INSCRÍBETE!</button>
+                  </a>
                 </div>
             </div>
-            <div>
+            <div class="d-flex justify-content-center">
                 <app-planes/>                  
             </div>
             <div class="mas-info">                
                 <h1>¡Únete a nuestro gym selecciona tu Plan!</h1>
-                <button class="boton">MÁS INFORMACIÓN</button>
+                <a routerLink ="/auth/register">
+                  <button class="boton">MÁS INFORMACIÓN</button>
+                </a>
             </div>
         </div>
       </div>      
@@ -107,9 +111,7 @@
             </div>
       </div>
       </div>
-
-      <hr class="separador">
-      
-      <app-footer></app-footer>
     </div>
+    <hr class="separador">      
+    <app-footer></app-footer>
   </div>
