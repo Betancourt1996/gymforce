@@ -1,0 +1,66 @@
+.contenedor-item{
+    padding: 0 16px;
+}
+.forma-pago{
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    border-radius: 20px;
+     
+}
+.forma-pago-header{
+    align-self: end;
+    margin: 3px 15px;
+    font-size: 24PX;
+    color: var(--color-gris);
+}
+.forma-pago-body{
+    padding: 10px 20px 40px 20px;
+}
+.forma-pago-imagen-tarjeta{
+    position: relative;
+    img{
+        object-fit: cover;
+        object-position: center;
+    }
+}
+.forma-pago-detalles-titulo, .forma-pago-detalles-numero, .forma-pago-detalles-fecha{
+    overflow: hidden;
+    span{
+        white-space: nowrap;
+    }
+}
+.forma-pago-detalles-titulo span, .forma-pago-detalles-numero span{
+    color: var(--color-azul);
+    font-size: 32px;
+}
+.forma-pago-detalles-numero, .forma-pago-detalles-fecha{
+    display: flex;
+    justify-content: end;
+}
+.forma-pago-detalles-fecha{
+    color: var(--color-gris);
+    font-size: 24px;
+}
+@media (max-width: 1200px) {
+    .forma-pago-detalles-titulo span, .forma-pago-detalles-numero span{
+        font-size: 28px;
+    }
+    .forma-pago-detalles-fecha{
+        font-size: 20px;
+    }
+}
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+    .contenedor-item{
+        padding: 0;
+    }
+
+}
+@media (max-width: 480px) {
+
+}

@@ -127,6 +127,11 @@
         line-height: 1.2;
     }
 }
+
+.clickeable:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 480px) {
   
   .titulo-objeto{

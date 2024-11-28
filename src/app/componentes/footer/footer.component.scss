@@ -12,9 +12,20 @@
 .btnUpFooter{
     width: 120px;
 }
+.logo_redes {
+    width: 50px;
+}
 @media(max-width: 1000px){
     .logo-footer{
         height: 35px;    
+    }
+    .btnUpFooter{
+        width: 70px;
+    }
+}
+@media(max-width: 480px){
+    .logo_redes{
+        width: 45px;
     }
     .btnUpFooter{
         width: 70px;

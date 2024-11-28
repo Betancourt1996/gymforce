@@ -20,9 +20,21 @@
         text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8), -2px -2px 6px rgba(0, 0, 0, 0.6);
     }
 }
+
+::ng-deep #stepperPersonalizadoPago .p-steps .p-steps-item .p-menuitem-link {
+    background: unset;
+}
+// color del paso Seleccionado
 ::ng-deep #stepperPersonalizadoPago .p-steps-current .p-steps-number{
     background: var(--color-azul);
 }
+// Linea en medio de los items 1-2-3
+::ng-deep #stepperPersonalizadoPago .p-steps .p-steps-item:before {
+    content: " ";
+    border-top: 3px solid var(--color-azul);
+    margin-top: -5px;
+}
+
 .step-content{
     button{
         margin: 0 2rem;

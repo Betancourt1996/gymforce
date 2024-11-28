@@ -1,0 +1,43 @@
+<div class="container-fluid g-0">
+    <div class="row g-0">
+        @for(tarjeta of tarjetas; track tarjeta.id){
+            <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                <div class="contenedor-item">
+                    <div class="forma-pago">
+                        <div class="forma-pago-header">
+                            <i class="bi bi-x-circle clickeable"></i>
+                        </div>
+                        <div class="forma-pago-body row g-0 clickeable" (click)="seleccionarFormaPago(tarjeta.id)">
+                            <div class="col-12 col-md-4 forma-pago-imagen-tarjeta">
+                                <img [src]="tarjeta.imgPath" alt="Forma Pago">
+                            </div>
+                            <div class="col-12 col-md-8 ps-0 ps-md-4 pt-4 pt-md-0 forma-pago-detalles">
+                                <div class="forma-pago-detalles-titulo">
+                                    <span>{{tarjeta.nombre}}</span>
+                                </div>
+                                <div class="forma-pago-detalles-numero">
+                                    <span>{{tarjeta.numero}}</span>
+                                </div>
+                                <div class="forma-pago-detalles-fecha">
+                                    <span>Expira {{tarjeta.fechaExpiracion}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 d-flex">
+            <div class="contenedor-item align-self-center">
+                <div class="agregar-tarjeta ps-3">
+                    <img 
+                        src="images/+.png" 
+                        alt="Agregar" 
+                        width="60px" 
+                        class="clickeable"
+                        (click)="agregarTarjeta()">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

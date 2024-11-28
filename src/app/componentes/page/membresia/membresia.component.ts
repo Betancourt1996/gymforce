@@ -108,6 +108,7 @@ export class MembresiaComponent implements OnInit{
 
   navigateTo(route: string) {
     this.router.navigate([route]);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   navegacionPorIndice(indice: number) {
