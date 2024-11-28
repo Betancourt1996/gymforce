@@ -16,7 +16,7 @@ export class TarjetasService {
     },
     {
       id: 2,
-      nombre: "MARTERCAD",
+      nombre: "MASTERCARD",
       numero: "*** ***** **8790",
       fechaExpiracion: "09/10",
       imgPath: 'images/tarjeta_mastercard.jpg',

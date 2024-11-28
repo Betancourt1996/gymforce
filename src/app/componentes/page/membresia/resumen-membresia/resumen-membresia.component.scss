@@ -1,0 +1,51 @@
+.titulo-objeto{
+    align-items: start;
+    img{
+        height: 44px;
+        width: auto;
+    }
+    h1{
+      margin-left: 20px;
+      font-size: 44px;
+      font-weight: 600;
+      color: var(--color-azul);
+    }
+    span{
+      font-style: italic;
+      color: var(--color-gris);
+      font-weight: bold;
+      font-style: italic;
+      font-size: 19px;
+    }
+    span::before{
+      content: "";
+      display: inline-block;
+      width: 50px;
+      height: 3px;
+      margin-left: 0;
+      margin-right: 40px;
+    }
+    span::after{
+      content: none;
+    }
+  }
+
+.padding-horizontal{
+    padding: 0 5rem;
+}
+  @media (max-width: 1000px) {
+    .padding-horizontal{
+        padding: 0 3rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .padding-horizontal{
+        padding: 0 2rem;
+    }
+}
+@media (max-width: 480px) {
+    .padding-horizontal{
+        padding: 0 1rem;
+    }
+}

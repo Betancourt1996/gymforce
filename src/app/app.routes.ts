@@ -29,7 +29,7 @@ export const routes: Routes = [
       //{ path: 'membresias', component: MembresiaComponent, canActivate: [MainGuard] },
       {
         path: 'membresias',
-        //canActivate: [MainGuard],
+        //canActivate: [MainGuard],// no entras si no estas logueado
         loadChildren: () => import('./rutas/membresias.routes').then(m => m.membresiasRoutes)
       },
       { path: 'beneficios', component: BeneficiosComponent },

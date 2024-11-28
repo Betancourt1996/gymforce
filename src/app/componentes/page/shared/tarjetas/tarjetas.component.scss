@@ -28,6 +28,7 @@
 }
 .forma-pago-detalles-titulo, .forma-pago-detalles-numero, .forma-pago-detalles-fecha{
     overflow: hidden;
+    text-overflow: ellipsis;
     span{
         white-space: nowrap;
     }
