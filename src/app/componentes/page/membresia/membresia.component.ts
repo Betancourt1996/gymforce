@@ -32,6 +32,7 @@ export class MembresiaComponent implements OnInit{
     effect(() => {
       if (this.membresiasService.selectedGym()) {
         console.log('Gym seleccionado: ', this.membresiasService.selectedGym());
+        console.log('Gym seleccionado: ', this.membresiasService.selectedGym().valueOf());
         this.navegacionPorIndice(1);
       }
     });
