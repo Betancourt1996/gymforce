@@ -1,3 +1,4 @@
+<app-loading *ngIf="loading"/>
 <div class="container-fluid p-0 m-0">
     <div class="col p-0 m-0">        
         
@@ -15,9 +16,138 @@
         <div class="padding-horizontal">            
             <div class="row g-0 d-flex justify-content-center">
                 
-<!--                 <div class="col-12 col-lg-8 bg-success">
-                    <h1>Contenido</h1>
-                </div> -->
+                <div class="col-12 col-xl-8 resumen">
+                    
+                        <!-- datos -->
+                        <div class="row g-0 div-datos">
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-5">
+                                    <span class="label-datos">
+                                        Opción de Pago:
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-7">
+                                    {{dataResumen.medio}}
+                                </div>
+                            </div>
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-5">
+                                    <span class="label-datos">
+                                        Tarjeta:
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-7">
+                                    {{dataResumen.tarjeta}}
+                                </div>
+                            </div>
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-5">
+                                    <span class="label-datos">
+                                        <span class="label-datos">
+                                            Nombres:
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-7">
+                                    {{dataResumen.nombres}}
+                                </div>
+                            </div>
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-5">
+                                    <span class="label-datos">
+                                        Contacto:
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-7">
+                                    {{dataResumen.contacto}}
+                                </div>
+                            </div>
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-5">
+                                    <span class="label-datos">
+                                        Correo:
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-7">
+                                    {{dataResumen.correo}}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- plan -->
+                        <div class="row g-0 my-2 my-sm-4 div-plan">
+                            <div class="col-12">
+                                <span style="color: var(--color-gris); font-weight: bold;">
+                                    Plan:
+                                </span>
+                            </div>
+                            <div class="col-12 text-end" style="padding-bottom: 5px;">
+                                <span style="color: var(--color-azul); font-weight: bold;">{{dataResumen.plan}}</span>
+                            </div>
+                        </div>
+                        <!-- Dinero -->
+                        <div class="row g-0 div-dinero">
+                            <div class="col-4 d-none d-md-block "></div>
+<!-- 
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-5">
+                                    <span class="label-datos">
+                                        Correo:
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-7">
+                                    {{dataResumen.correo}}
+                                </div>
+                            </div>
+                             -->
+                            <div class="col g-0">
+                                <div class="row g-0 my-2 my-sm-1 mx-1">
+                                    <div class="col-12 col-sm-5">
+                                        Subtotal:
+                                    </div>
+                                    <div class="col-12 col-sm-7">
+                                        <span class="span-dinero">
+                                            ${{dataResumen.subtotal}}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row g-0 my-2 my-sm-1 mx-1">
+                                    <div class="col-12 col-sm-5">
+                                        Impuestos:
+                                    </div>
+                                    <div class="col-12 col-sm-7">
+                                        <span class="span-dinero">
+                                            ${{dataResumen.impuestos}}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row g-0 my-2 my-sm-1 mx-1">
+                                    <div class="col-12 col-sm-5">
+                                        Delivery:
+                                    </div>
+                                    <div class="col-12 col-sm-7">
+                                        <span class="span-dinero">
+                                            ${{dataResumen.subtotal}}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row g-0 my-2 my-sm-1 mx-1">
+                                    <div class="col-12 col-sm-5">
+                                        Total a Pagar:
+                                    </div>
+                                    <div class="col-12 col-sm-7">
+                                        <span class="span-dinero">
+                                            ${{dataResumen.totalPagar}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Boton -->
+                        <div class="row g-0 div-boton mt-4 mt-md-5">
+                            <button class="boton btnContinuar" (click)="continuar()">Continuar</button>
+                        </div>
+                    
+                </div>
 
             </div>
         </div>

@@ -1,0 +1,110 @@
+.titulo-objeto{
+    align-items: start;
+    img{
+        height: 44px;
+        width: auto;
+    }
+    h1{
+      margin-left: 20px;
+      font-size: 44px;
+      font-weight: 600;
+      color: var(--color-azul);
+    }
+    span{
+      font-style: italic;
+      color: var(--color-gris);
+      font-weight: bold;
+      font-style: italic;
+      font-size: 19px;
+    }
+    span::before{
+      content: "";
+      display: inline-block;
+      width: 50px;
+      height: 3px;
+      margin-left: 0;
+      margin-right: 40px;
+    }
+    span::after{
+      content: none;
+    }
+  }
+
+.padding-horizontal{
+    padding: 0 10rem;
+}
+.resumen{
+  padding: 2rem 8rem;
+  background-color: white;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.div-datos div, .div-dinero div, .div-plan div{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.div-datos, .div-dinero{
+  font-size: 20px;
+}
+.div-plan{
+  font-size: 28px;
+  padding: 0 1rem;
+}
+.div-boton{
+  display: flex;
+  justify-content: center;
+  
+}
+.label-datos{
+  color: var(--color-gris);
+  font-weight: 700;
+}
+.div-plan{
+  border-top: 3px solid var(--color-azul);
+  border-bottom: 3px solid var(--color-azul);
+}
+.span-dinero{
+  color: var(--color-gris);
+
+}
+.botones{
+    
+}
+.btnModificar, .btnConfirmar{
+  font-size: 22px;
+  width: 300px;
+  box-shadow: 10px 10px 0px -5px #ffffff, 10px 10px 0px -4px var(--color-azul);
+  background-color: var(--color-azul);
+  border: unset;
+}
+.btnModificar{
+    box-shadow: 10px 10px 0px -5px #ffffff, 10px 10px 0px -4px black;
+    background-color: black;
+    border: unset;
+}
+  @media (max-width: 1000px) {
+    .padding-horizontal{
+        padding: 0 3rem;
+    }
+    .resumen{
+      padding: 2rem 6rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .padding-horizontal{
+        padding: 0 2rem;
+    }
+    .resumen{
+      padding: 2rem 2rem;
+    }
+}
+@media (max-width: 480px) {
+    .padding-horizontal{
+        padding: 0 1rem;
+    }
+    .resumen{
+      padding: 2rem 1rem;
+    }
+}

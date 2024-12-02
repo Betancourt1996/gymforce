@@ -31,11 +31,55 @@
   }
 
 .padding-horizontal{
-    padding: 0 5rem;
+    padding: 0 10rem;
+}
+.resumen{
+  padding: 2rem 8rem;
+  background-color: white;
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+.div-datos div, .div-dinero div, .div-plan div{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.div-datos, .div-dinero{
+  font-size: 20px;
+}
+.div-plan{
+  font-size: 28px;
+  padding: 0 1rem;
+}
+.div-boton{
+  display: flex;
+  justify-content: center;
+  
+}
+.label-datos{
+  color: var(--color-gris);
+  font-weight: 700;
+}
+.div-plan{
+  border-top: 3px solid var(--color-azul);
+  border-bottom: 3px solid var(--color-azul);
+}
+.span-dinero{
+  color: var(--color-gris);
+
+}
+.btnContinuar{
+  font-size: 26px;
+  padding: 8px 50px;
+  box-shadow: 10px 10px 0px -5px #ffffff, 10px 10px 0px -4px var(--color-azul);
+  background-color: var(--color-azul);
+  border: unset;
 }
   @media (max-width: 1000px) {
     .padding-horizontal{
         padding: 0 3rem;
+    }
+    .resumen{
+      padding: 2rem 6rem;
     }
 }
 
@@ -43,9 +87,15 @@
     .padding-horizontal{
         padding: 0 2rem;
     }
+    .resumen{
+      padding: 2rem 2rem;
+    }
 }
 @media (max-width: 480px) {
     .padding-horizontal{
         padding: 0 1rem;
+    }
+    .resumen{
+      padding: 2rem 1rem;
     }
 }

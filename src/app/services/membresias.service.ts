@@ -1,4 +1,6 @@
 import { Injectable, signal } from '@angular/core';
+import { Observable, of } from 'rxjs';
+import { TarjetasService } from './tarjetas.service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +16,29 @@ export class MembresiasService {
   setGym(gym: any) { this.selectedGym.set(gym); }
   setPlan(plan: any) { this.selectedPlan.set(plan); }
   setPago(pago: any) { this.selectedPago.set(pago); }
-  setConfirmarResumen(booConfi: boolean) { this.confirmarResumen.set(booConfi); }
+  setConfirmarResumen(booConfi: any) { this.confirmarResumen.set(booConfi); }
+
+
+  constructor(
+    private tarjetasSevices: TarjetasService,
+  ){}
+
+  private dataTarjeta = {
+    medio: "Tarjeta",
+    nombres: "Juan Carlos Carrillo V.",
+    contacto: "098 875 7896",
+    correo: "juanCarlos@gmai..com",
+    plan: "PLAN BÁSICO",
+    subtotal: "18.26",
+    impuestos: "2.19",
+    delivery: "0.00",
+    totalPagar: "20.45"
+  };
+
+  getResumen(intIdTarjeta): Observable<any> {    
+    const dataTarjeta = this.dataTarjeta;
+    let tarjeta = "Visa xxxx98";
+    const datos = {...dataTarjeta,tarjeta: tarjeta}
+    return of(datos);
+  }
 }

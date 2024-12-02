@@ -1,1 +1,103 @@
-<p>confirmacion-membresia works!</p>
+<app-loading *ngIf="loading"/>
+<div class="container-fluid p-0 m-0">
+    <div class="col p-0 m-0">        
+        
+        <div class="titulo-objeto mb-5 mt-5 padding-horizontal">
+           <div class="d-flex">
+            <img 
+            src="images/TARJETA.png" 
+            alt="Tarjeta"             
+            >
+            <h1>Datos de la Tarjeta</h1>
+           </div>
+            <span>CONFIRMACIÓN DE DATOS</span>            
+        </div>
+        
+        <div class="padding-horizontal">            
+            <div class="row g-0 d-flex justify-content-center">
+                
+                <div class="col-12 col-xl-8 resumen">
+                    
+                        <!-- datos -->
+                        <div class="row g-0 div-datos">
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-3">
+                                    <span class="label-datos">
+                                        Cédula:
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    090 884 9268
+                                </div>
+                            </div>
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-3">
+                                    <span class="label-datos">
+                                        Nombres:
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    Juan Carlos
+                                </div>
+                            </div>
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-3">
+                                    <span class="label-datos">
+                                        <span class="label-datos">
+                                            Apellidos:
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    Carrillo Valencia
+                                </div>
+                            </div>
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-3">
+                                    <span class="label-datos">
+                                        Dirección:
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    Kennedy Norte Mz. B
+                                </div>
+                            </div>
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-3">
+                                    <span class="label-datos">
+                                        Teléfono:
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    098 006 2258
+                                </div>
+                            </div>
+                            <div class="row g-0 my-2 my-sm-1 mx-1">
+                                <div class="col-12 col-sm-3">
+                                    <span class="label-datos">
+                                        Correo:
+                                    </span>
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    juancarlos.carrillovalencia&#64;gmail.com
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+                <div class="col-12 col-xl-8 botones">
+                        <!-- Boton -->
+                        <div class="row g-0 div-boton mt-4 mt-md-5">
+                            <div class="col d-flex justify-content-center my-3">
+                                <button class="boton btnModificar" (click)="modificar()">MODIFICAR DATOS</button>
+                            </div>
+                            <div class="col d-flex justify-content-center my-3">
+                                <button class="boton btnConfirmar" (click)="confirmar()">CONFIRMAR</button>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

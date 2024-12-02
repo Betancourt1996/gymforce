@@ -50,7 +50,7 @@ export class TarjetasComponent {
   }
   
   agregarTarjeta(){
-    this.muestraMensaje("", "Click");
+    this.muestraMensaje("", "Tarjeta");
   }
   muestraError(error){
     this.messageService.add({ severity: 'error', summary: 'Error', detail: error });
