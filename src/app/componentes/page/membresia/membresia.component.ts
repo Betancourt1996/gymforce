@@ -1,4 +1,4 @@
-import { Component, effect, OnInit } from '@angular/core';
+import { Component, effect, OnDestroy, OnInit } from '@angular/core';
 import { FooterComponent } from "../../footer/footer.component";
 import { PlanesComponent } from "../shared/planes/planes.component";
 import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
@@ -20,7 +20,7 @@ import { MembresiasService } from 'app/services/membresias.service';
   templateUrl: './membresia.component.html',
   styleUrl: './membresia.component.scss'
 })
-export class MembresiaComponent implements OnInit{
+export class MembresiaComponent implements OnInit, OnDestroy{
   activeIndex: number = 0;
   currentPath: any;
   selectedGym: any;
@@ -32,28 +32,42 @@ export class MembresiaComponent implements OnInit{
     effect(() => {
       if (this.membresiasService.selectedGym()) {
         console.log('Gym seleccionado: ', this.membresiasService.selectedGym());
-        console.log('Gym seleccionado: ', this.membresiasService.selectedGym().valueOf());
+        localStorage.setItem("selectedGym", this.membresiasService.selectedGym().valueOf())
         this.navegacionPorIndice(1);
       }
     });
     effect(() => {
       if (this.membresiasService.selectedPlan()) {
         console.log('Plan seleccionado: ',this.membresiasService.selectedPlan());
+        localStorage.setItem("selectedPlan", this.membresiasService.selectedPlan().valueOf())
         this.navegacionPorIndice(2);
       }
     });
     effect(() => {
       if (this.membresiasService.selectedPago()) {
         console.log('Pago seleccionado: ',this.membresiasService.selectedPago());
+        localStorage.setItem("selectedPago", this.membresiasService.selectedPago().valueOf())
         this.navegacionPorIndice(3);
       }
     });
     effect(() => {
       if (this.membresiasService.confirmarResumen()) {
         console.log('Resumen Confirmado: ', this.membresiasService.confirmarResumen());
+        localStorage.setItem("confirmarResumen", this.membresiasService.confirmarResumen().valueOf())
         this.navegacionPorIndice(4);
       }
     });
+  }
+
+  ngOnDestroy() {
+    this.membresiasService.setGym(null);
+    this.membresiasService.setPlan(null);
+    this.membresiasService.setPago(null);
+    this.membresiasService.setConfirmarResumen(null);
+    localStorage.removeItem("selectedGym");
+    localStorage.removeItem("selectedPlan");
+    localStorage.removeItem("selectedPago");
+    localStorage.removeItem("confirmarResumen");
   }
   
   ngOnInit() { 

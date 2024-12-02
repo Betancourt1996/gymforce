@@ -10,13 +10,13 @@ export class MembresiasService {
   selectedGym = signal<any>(null);
   selectedPlan = signal<any>(null);
   selectedPago = signal<any>(null);
-  confirmarResumen = signal<boolean>(false);
+  confirmarResumen = signal<any>(false);
 
   // Métodos para actualizar los signals
   setGym(gym: any) { this.selectedGym.set(gym); }
   setPlan(plan: any) { this.selectedPlan.set(plan); }
   setPago(pago: any) { this.selectedPago.set(pago); }
-  setConfirmarResumen(booConfi: any) { this.confirmarResumen.set(booConfi); }
+  setConfirmarResumen(confirmar: any) { this.confirmarResumen.set(confirmar); }
 
 
   constructor(

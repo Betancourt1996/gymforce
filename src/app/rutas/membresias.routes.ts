@@ -6,6 +6,7 @@ import { PagoMembresiaComponent } from 'app/componentes/page/membresia/pago-memb
 import { PlanesMembresiaComponent } from 'app/componentes/page/membresia/planes-membresia/planes-membresia.component';
 import { ResumenMembresiaComponent } from 'app/componentes/page/membresia/resumen-membresia/resumen-membresia.component';
 import { MainGuard } from 'app/guards/main.guard';
+import { MembresiaGuard } from 'app/guards/membresia.guard';
 
 
 export const membresiasRoutes: Routes = [
@@ -15,10 +16,10 @@ export const membresiasRoutes: Routes = [
     children:[
       { path: '', redirectTo: 'gymnasio', pathMatch: 'full' },
       { path: 'gymnasio', component: GymnasioMembresiaComponent },
-      { path: 'planes', component: PlanesMembresiaComponent },
-      { path: 'pagos', component: PagoMembresiaComponent },
-      { path: 'resumen', component: ResumenMembresiaComponent },
-      { path: 'confirmacion', component: ConfirmacionMembresiaComponent },
+      { path: 'planes', component: PlanesMembresiaComponent, canActivate: [MembresiaGuard]  },
+      { path: 'pagos', component: PagoMembresiaComponent, canActivate: [MembresiaGuard]  },
+      { path: 'resumen', component: ResumenMembresiaComponent, canActivate: [MembresiaGuard]  },
+      { path: 'confirmacion', component: ConfirmacionMembresiaComponent, canActivate: [MembresiaGuard]  },
     ]
   },
 ];

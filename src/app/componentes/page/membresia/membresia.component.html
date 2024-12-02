@@ -2,36 +2,7 @@
   <div class="pt-3 pt-lg-5" id="stepperPersonalizadoPago">
     <p-steps [model]="items" [activeIndex]="activeIndex"  styleClass="custom-steps"></p-steps>
   </div>
-  
-  <div class="mt-3 mt-lg-5 step-content d-flex justify-content-center">
-    <div *ngIf="activeIndex === 0">    
-      <!-- Contenido para seleccionar el gimnasio -->
-      <button pButton label="Siguiente" (click)="nextStep()"></button>
-    </div>
-  
-    <div *ngIf="activeIndex === 1">    
-      <!-- Contenido para seleccionar la membresía -->
-      <button pButton label="Anterior" (click)="previousStep()"></button>
-      <button pButton label="Siguiente" (click)="nextStep()"></button>
-    </div>
-  
-    <div *ngIf="activeIndex === 2">    
-      <!-- Formulario de pago o selección de tarjeta -->
-      <button pButton label="Anterior" (click)="previousStep()"></button>
-      <button pButton label="Siguiente" (click)="nextStep()"></button>
-    </div>
-    <div *ngIf="activeIndex === 3">    
-      <!-- Formulario de pago o selección de tarjeta -->
-      <button pButton label="Anterior" (click)="previousStep()"></button>
-      <button pButton label="Siguiente" (click)="nextStep()"></button>
-    </div>
-  
-    <div *ngIf="activeIndex === 4">    
-      <!-- Resumen de la compra -->
-      <button pButton label="Anterior" (click)="previousStep()"></button>
-      <button pButton label="Confirmar Compra"></button>
-    </div>
-  </div>
+
   <div class="mt-3 mt-lg-5">
     <router-outlet></router-outlet>
     <div class="div-encabezado-listo-para-empezar mt-3 mt-lg-5">
