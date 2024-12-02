@@ -27,7 +27,7 @@ export class MembresiasService {
     medio: "Tarjeta",
     nombres: "Juan Carlos Carrillo V.",
     contacto: "098 875 7896",
-    correo: "juanCarlos@gmai..com",
+    correo: "juanCarlos@gmai.com",
     plan: "PLAN BÁSICO",
     subtotal: "18.26",
     impuestos: "2.19",
